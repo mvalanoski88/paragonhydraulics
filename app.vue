@@ -1,6 +1,6 @@
 <template>
     <Nav />
-    <NuxtPage :page-key="route => route.path" />
+    <NuxtPage />
     <Footer />
 </template>
 

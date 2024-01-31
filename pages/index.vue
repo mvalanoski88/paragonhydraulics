@@ -37,9 +37,9 @@
 </template>
 
 <script setup>
-import { useMobileCheck } from '~/composables/useMobileCheck';
+import { ref } from 'vue';
 
-const { viewportWidth } = useMobileCheck()
+const { isDesktopOrTablet } = useDevice()
 
 const logos = ref([
                 {name : "usnavy", altText : "US Navy Logo"},
@@ -48,7 +48,7 @@ const logos = ref([
                 {name : "navsea", altText : "NAVSEA Logo"},
             ])
 const getLogoSrc = (logo) => {
-     return viewportWidth.value > 500 ? `https://s3.amazonaws.com/assets.paragonhydraulics.com/img/${logo.name}.png`
+     return isDesktopOrTablet ? `https://s3.amazonaws.com/assets.paragonhydraulics.com/img/${logo.name}.png`
                          : `https://s3.amazonaws.com/assets.paragonhydraulics.com/img/${logo.name}.webp`;
 }
 

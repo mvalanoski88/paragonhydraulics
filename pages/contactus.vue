@@ -41,9 +41,6 @@
 </template>
 <script setup>
 import { Icon } from '@iconify/vue';
-import { useMobileCheck } from '~/composables/useMobileCheck';
-
-const { viewportWidth } = useMobileCheck()
 
 </script>
 <style lang="scss" scoped>

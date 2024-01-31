@@ -37,65 +37,51 @@
         </nav>
     </header>
 </template>
-<script>
+<script setup>
+import { ref, onMounted } from 'vue';
 import { Icon } from '@iconify/vue';
 
-export default {
-    name: 'navigation',
-    components: {Icon},
-    data() {
-        return {
-            scrollPosition: null,
-            mobile: null,
-            mobileNav: null,
-            windowWidth: null,
-            isOutside: null,
-            navlinks: [
-                {name : "Home", link : "/"},
-                {name : "Services", link : "/services"},
-                {name : "About Us", link : "/aboutus"},
-                {name : "Contact Us", link : "/contactus"},
-                ]
-            };
-        },
-    mounted(){
-        window.addEventListener('resize', this.checkForMobile);
-        this.checkForMobile();
-        window.addEventListener('scroll', this.scrollUpdate);
+const { isMobileOrTablet } = useDevice()
 
-    },
-    methods: {
-        toggleMenuOpen() {
-            this.mobileNav = !this.mobileNav;
-        },
+const navlinks = ref([
+  { name: "Home", link: "/" },
+  { name: "Services", link: "/services" },
+  { name: "About Us", link: "/aboutus" },
+  { name: "Contact Us", link: "/contactus" },
+]);
 
-        toggleMenuClose() {
-            this.mobileNav = false;
-        },
+const scrollPosition = ref(null);
+const mobile = ref(null);
+const mobileNav = ref(null);
 
-        scrollUpdate() {
-            let scrollPosition = window.scrollY;
-            if (scrollPosition > 325) {
-                this.scrollPosition = true;
-                return;
-            }
-            this.scrollPosition = false;
-        },
+onMounted(() => {
+  checkForMobile();
+  window.addEventListener('scroll', scrollUpdate);
+  window.addEventListener('resize', checkForMobile);
+});
 
-        checkForMobile() {
-            this.windowWidth = window.innerWidth;
-            if (this.windowWidth <= 766) {
-                this.mobile = true;
-                return;
-            }
-            this.mobile = false;
-            this.mobileNav = false;
-            return;
-        }
-    },
-};
+function toggleMenuOpen() {
+  mobileNav.value = !mobileNav.value;
+}
 
+function toggleMenuClose() {
+  mobileNav.value = false;
+}
 
+function scrollUpdate() {
+  const scrollPositionValue = window.scrollY;
+  scrollPosition.value = scrollPositionValue > 325;
+}
+
+function checkForMobile() {
+    if (isMobileOrTablet) {
+        mobile.value = true;
+        return;
+    }
+    mobile.value = false;
+    mobileNav.value = false;
+    return;
+}
 </script>
 <style lang = "scss" scoped>
 nav{

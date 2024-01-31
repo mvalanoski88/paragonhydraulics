@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: false,
+  ssr: true,
   devtools: { 
     enabled: true,
   },
@@ -28,5 +28,9 @@ export default defineNuxtConfig({
   },
   modules: [
     '@nuxtjs/critters',
+    '@nuxtjs/device',
   ],
+  device: {
+    refreshOnResize: true
+  }
 })
