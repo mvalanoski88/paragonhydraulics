@@ -1,0 +1,7 @@
+/* cyrillic-ext */
+@font-face {
+    font-family: 'Roboto Flex';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/other/RobotoFlex.ttf) format('truetype');
+  }

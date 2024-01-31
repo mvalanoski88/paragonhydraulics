@@ -1,0 +1,29 @@
+//branding colors
+$paragon-red: #C80E2D;
+$paragon-blue: #051535;
+$paragon-gray: #6F8695;
+$paragon-white: #ffffff;
+
+//font specs
+$font-family: 'Roboto Flex', sans-serif;
+$font-family-heading: 'Bebas', sans-serif;
+$font-size-copy: calc(1.65rem - 1.75vw);
+$font-size-copy-button: calc(0.60rem + 0.65vw);
+$font-size-copy-small: calc(0.85rem + 1.05vw);
+$font-size-contact-card: calc(0.65rem + .85vw);
+$font-size-copy-caption: calc(0.85rem + 0.95vw);
+$font-size-copy-caption-small: calc(0.25rem + 0.55vw);
+$font-size-copy-med: calc(1rem + 1vw);
+$heading-size: calc(2.55rem - 0.85vh);
+$heading-size-two: calc(6rem - 0.95vh);
+$heading-size-three: calc(1.55rem + 1.5vw);
+
+//for CTA button padding
+$topbottom: calc(0.5rem + 0.15vw);
+$leftright: calc(2.15rem + 1.55vw);
+
+//Font Line height
+@mixin size-height($size, $line-height) {
+    font-size: $size;
+    line-height: $line-height;
+  }

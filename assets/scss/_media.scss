@@ -1,0 +1,123 @@
+#mainLogo {
+    width: 14.5rem;
+    height: 100%;
+    min-width: 150px;
+    max-width: 200px;
+}
+
+img {
+    max-width: 100%;
+}
+
+svg {
+    color: $paragon-blue;
+    margin-right: 5px;
+}
+
+.blue {
+    background-color: $paragon-blue;
+
+    &:nth-last-of-type(2) {
+        background-color: rgba($paragon-blue, 0.75);
+    }
+}
+
+.red {
+    margin-top: 5rem;
+    background-color: rgba($paragon-red, 0.65);
+
+    @media (max-width:500px) {
+        margin-top: 0;
+    }
+    
+}
+
+.image-bg {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center;
+
+}
+
+#homeCrane {
+    background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/crane-473712_1280.jpg);
+
+    @media (max-width:500px) {
+        background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/craneextend.webp);
+
+    }
+}
+
+#americanFlag {
+    opacity: 0.15;
+    z-index: 1;
+    background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/americanflag.jpg);
+
+    @media (max-width:500px) {
+        background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/americanflag.webp);
+
+    }
+
+}
+
+#customers {
+    background-image: url(/norfolknavyship.jpg);
+    box-shadow: inset 0 0 0 2000px #051535a6;
+
+    img {
+        padding: 1rem;
+        max-width: 60%;
+    }
+
+    @media (max-width:500px) {
+        background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/norfolknavyship.webp);
+        background-position: top;
+
+    }
+}
+
+#harborCrane {
+    background-image: url(/craneship.jpg);
+
+    @media (max-width:500px) {
+        background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/craneship.webp);
+
+    }
+
+}
+
+#techServices {
+    background-image: url(/military-2410323.jpg);
+    box-shadow: inset 0 0 0 2000px #051535a6;
+
+    @media (max-width:500px) {
+        background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/militaryship.webp);
+
+    }
+}
+
+#meetUs {
+    background-image: url(/meeting.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 2000px #051535a6;
+
+    @media (max-width:500px) {
+        background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/meeting.webp);
+        background-position: left;
+    }
+}
+
+#team {
+    background-image: url(/norfolk_waterfront.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 2000px rgba($paragon-white, 0.55);
+}

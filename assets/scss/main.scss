@@ -1,0 +1,79 @@
+@import '~/assets/scss/variables.scss';
+@import '~/assets/scss/textstyles.scss';
+@import '~/assets/scss/media.scss';
+@import '~/assets/scss/contact-card.scss';
+
+
+body {
+
+    #__nuxt {
+        position: relative;
+    }
+
+    margin: 0;
+    font-family: $font-family;
+    color: $paragon-blue;
+    height: 100vh;
+
+    section {
+        display: flex;
+        align-items: center;
+        height: auto;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &:first-of-type {
+            justify-content: center;
+            padding: 6rem 2.5rem 0 2.5rem;
+            height: 100vh;
+            box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.65);
+
+            @media (max-width:1000px) {
+                padding: 2.75rem;
+        
+            }
+    
+        }
+
+        &#home {
+            background-image: url(/craneshero2.jpg);
+
+            @media (max-width:500px) {
+                background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/craneshero2.webp);
+                background-position: right;
+        
+            }
+        }
+        &#services {
+            background-image: url(/phnorfolk_trumanship.jpg);
+
+            @media (max-width:500px) {
+                background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/norfolkship.webp);
+                background-position: right;
+        
+            }
+        }
+        &#aboutus {
+            background-image: url(/boat-1451202_1920.jpg);
+
+            @media (max-width:500px) {
+                background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/militaryship2.webp);
+        
+            }
+        }
+        &#contactus {
+            background-image: url(/sarah-dann-5765396_1920.jpg);
+
+            @media (max-width:500px) {
+                background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/rig.webp);
+                background-position: right;
+        
+            }
+        }
+
+        &>div {
+            padding-top: 5rem;
+        }
+    }
+}

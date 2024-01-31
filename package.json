@@ -1,0 +1,25 @@
+{
+  "name": "ParagonHydraulics",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@iconify/vue": "^4.1.1",
+    "nuxt": "^3.9.3",
+    "sass": "^1.69.7",
+    "sass-loader": "^14.0.0",
+    "vue": "^3.4.10",
+    "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@levidavidmurray/input-formatter": "^1.0.4",
+    "@nuxtjs/critters": "^0.6.0",
+    "bootstrap": "^5.3.2"
+  }
+}

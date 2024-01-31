@@ -1,0 +1,15 @@
+.contact-card {
+    background-color: rgba($paragon-gray, 0.75);
+    border: 1px solid rgba($paragon-blue, 0.85);
+
+    .contact-details {
+        & div > span {
+            @include size-height(2.35rem, 2.25rem);
+            text-decoration: underline;
+        }
+
+        span {
+            @include size-height(1.35rem, 2.25rem);
+        }
+    }
+}

@@ -1,0 +1,8 @@
+/* cyrillic-ext */
+@font-face {
+    font-family: 'Bebas';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/other/Bebas.ttf) format('truetype');
+    font-display: swap;
+  }
