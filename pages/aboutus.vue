@@ -1,20 +1,11 @@
 <template>
     <main>
-        <section id="aboutus">
-            <div class="d-flex align-items-center">
-                <div class="row flex-column flex-md-row align-items-center">
-                    <div class="col-12 col-md-4 text-center text-md-start p-3">
-                        <h2>ABOUT US</h2>
-                    </div>
-                    <div class="col-12 col-md-8 p-0">
-                        <h1>Our team of skilled engineers and technicians brings a wealth of experience to every project. From conceptualization to execution, we leverage our expertise to deliver robust and reliable mechanical solutions</h1>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <PageHero sectionId="aboutus"
+                  pageTitle="About Us"
+                  pageHeading="Our team of skilled engineers and technicians brings a wealth of experience to every project. From conceptualization to execution, we leverage our expertise to deliver robust and reliable mechanical solutions" />
         <section id="meetUs" class="justify-content-center">
             <div class="p-0 p-md-5 m-0">
-                <div class="row">
+                <div class="row m-0">
                     <div class="col-12 text-center">
                         <p>Paragon Hydraulics LLC comprises a dedicated team of exceptionally skilled and motivated professionals boasting a collective experience of over 50 years in ship repair. Our team actively contributes to various programs for the Navy, Army, Coast Guard, MSC, and commercial industries.</p>
                         <p>Specializing in worldwide hull and deck machinery, Paragon Hydraulics is renowned for providing top-tier support and solutions. We are unwaveringly committed to cultivating, sustaining, and nurturing a workforce of utmost professionalism and high expertise, setting the benchmark in the ship repair, maintenance, and modernization industry.</p>

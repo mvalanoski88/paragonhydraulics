@@ -18,6 +18,7 @@ logs
 .idea
 *.psd
 *.docx
+*.txt
 
 # Local env files
 .env

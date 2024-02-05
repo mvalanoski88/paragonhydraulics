@@ -25,7 +25,7 @@
                     <div class="col-12">
                         <SectionHeader class="text-center" heading="Some of our customers" :style="'light'" />
                         <div class="row mt-0 mt-md-5">
-                            <div v-for="(logo, index) in logos" :key="index" class="d-flex justify-content-center mb-4 mb-md-0 col-12 col-md-3">
+                            <div v-for="(logo, index) in logos" :key="index" class="d-flex justify-content-center mb-4 mb-md-0 col-6 col-md-3">
                                 <img :src="getLogoSrc(logo)" :alt="logo.altText" />
                             </div>
                         </div>

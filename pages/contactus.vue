@@ -4,9 +4,9 @@
             <div class="d-flex w-100 align-items-center justify-content-center">
                 <div class="row w-100 flex-column flex-md-row align-items-center">
                     <div class="col-12 col-md-5 text-center text-md-start p-0">
-                        <h2>CONTACT US</h2>
+                        <h1>CONTACT US</h1>
                     </div>
-                    <div class="d-flex flex-column col-12 col-md-7 p-0 mt-4 mt-md-0">
+                    <div class="d-flex flex-column col-12 col-md-7 p-0">
                         <div class="row">
                             <div class="d-flex align-items-center p-0">
                                 <p class="text-uppercase text-align-left">
@@ -23,7 +23,7 @@
                         </div>
                         <div class="row">
                             <div class="d-flex align-items-center p-0">
-                                <p v-if="viewportWidth > 500" class="text-uppercase"><Icon icon="ion:call-sharp" />757-973-3773</p>
+                                <p v-if="isDesktopOrTablet" class="text-uppercase"><Icon icon="ion:call-sharp" />757-973-3773</p>
                                 <p v-else class="text-uppercase"><Icon icon="tabler:phone-call" /><a href="tel:757-973-3773">757-973-3773</a></p>
                             </div>
                         </div>
@@ -41,6 +41,7 @@
 </template>
 <script setup>
 import { Icon } from '@iconify/vue';
+const { isDesktopOrTablet } = useDevice()
 
 </script>
 <style lang="scss" scoped>

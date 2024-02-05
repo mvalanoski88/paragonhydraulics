@@ -1,5 +1,5 @@
 <template>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mx-0">
         <div class="col-8">
             <form id="PHRFQ">
                 <label>Name
@@ -10,7 +10,7 @@
                 <input type="tel" id="phone" name="phone" minlength="10" placeholder="###-###-####" v-model="phone" required></label>
                 <label>Company
                 <input type="text" id="company" name="company" v-model="company" required></label>
-                <StateDropdown />
+                <StateDropdown @selected-state="handleSelectedState"/>
                 <div class="my-4" style="text-align: center;">
                     <button type="submit" class="btn text-uppercase" id="submission" value="Submit Form" data-sitekey="6Lcdm5AoAAAAAGa2sDFblYckqe-t2exwT_68_4Mk" data-callback='onSubmit' data-action="submit">Submit Form</button>
                 </div>
@@ -23,13 +23,17 @@
 </template>
     
 <script setup>
-
 import {InputFormatter} from '@levidavidmurray/input-formatter';
+import {ref} from 'vue';
+
+const selectedState = ref('');
 
 function onSubmit(token) {
             document.getElementById("PHRFQ").submit();
         }
-
+function handleSelectedState(state) {
+    selectedState.value = state;
+}
 
 onMounted(() => {
 
@@ -49,13 +53,14 @@ onMounted(() => {
 
     const { name, email, phone, company } = event.target;
 
-    const endpoint = "/";
+    const endpoint = "https://t7hi1xq663.execute-api.us-east-1.amazonaws.com/default/paragonhydraulics-emailsend";
     
     const body = JSON.stringify({
         senderName: name.value,
         senderEmail: email.value,
         senderPhone: phone.value,
         senderCompany: company.value,
+        senderState: state.value
     });
         
     const requestOptions = {
@@ -69,6 +74,7 @@ onMounted(() => {
                 document.getElementById("result-text").innerHTML =
                 '<p style="font-size: 1rem; margin-bottom: 0; text-align: center; line-height: 1.5rem;">Thank you for your request. A representative will be in contact with you.</p>';
                 document.getElementById('submission').disabled="true";
+                console.log(body)
             }
         })
         .catch((error) => {

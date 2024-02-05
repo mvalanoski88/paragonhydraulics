@@ -36,6 +36,7 @@ useSeoMeta({
   ogTitle: 'Paragon Hydraulics',
   description: 'Paragon Hydraulics LLC comprises a dedicated team of exceptionally skilled and motivated professionals boasting a collective experience of over 50 years in ship repair. Our team actively contributes to various programs for the Navy, Army, Coast Guard, MSC, and commercial industries.',
   ogDescription: 'Paragon Hydraulics LLC comprises a dedicated team of exceptionally skilled and motivated professionals boasting a collective experience of over 50 years in ship repair. Our team actively contributes to various programs for the Navy, Army, Coast Guard, MSC, and commercial industries.',
+  ogImage: 'https://s3.amazonaws.com/assets.paragonhydraulics.com/img/phogimage.jpg',
 })
 
 </script>

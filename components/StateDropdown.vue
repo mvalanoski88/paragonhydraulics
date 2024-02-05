@@ -1,7 +1,7 @@
 <template>
     <div>
         <label for="state">State
-            <select id="state" name="state">
+            <select id="state" name="state" @change="$emit('selected-state', $event.target.value)">
             <option value="---">---</option>
             <option value="Alabama">Alabama</option>
             <option value="Alaska">Alaska</option>

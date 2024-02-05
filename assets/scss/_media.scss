@@ -25,9 +25,11 @@ svg {
 .red {
     margin-top: 5rem;
     background-color: rgba($paragon-red, 0.65);
+    width: 75%;
 
     @media (max-width:500px) {
         margin-top: 0;
+        width: 100%;
     }
     
 }
@@ -71,7 +73,7 @@ svg {
 
     img {
         padding: 1rem;
-        max-width: 60%;
+        max-width: 100%;
     }
 
     @media (max-width:500px) {

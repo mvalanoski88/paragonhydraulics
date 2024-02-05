@@ -1,5 +1,5 @@
 <template>
-    <div class="row">
+    <div class="row mx-0">
         <div class="text-center col-12">
             <span :style="textColor">{{ heading }}</span>
         </div>
@@ -35,7 +35,7 @@ span {
     color: $paragon-white;
 
     @media (max-width:1000px) {
-        @include size-height(4.85rem, 4.75rem);
+        @include size-height(3rem, 4.15rem);
 
     }
 }

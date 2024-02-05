@@ -6,11 +6,11 @@
             <h1>{{ pageTitle }}</h1>
           </div>
           <div class="col-12 col-md-8 p-0">
-            <h1>{{ pageHeading }}</h1>
+            <h2>{{ pageHeading }}</h2>
           </div>
         </div>
         <div v-else class="text-center">
-            <h1>{{ pageHeading }}</h1>
+            <h1 class="home-hero-text">{{ pageHeading }}</h1>
             <CtaButton class="btn text-uppercase" :link="link" :text="text" />
         </div>
       </div>

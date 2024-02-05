@@ -3,6 +3,11 @@
 @import '~/assets/scss/media.scss';
 @import '~/assets/scss/contact-card.scss';
 
+/* for testing
+* {
+    outline: 1px solid #f00 !important;
+  }
+*/
 
 body {
 
@@ -74,6 +79,11 @@ body {
 
         &>div {
             padding-top: 5rem;
+
+            @media (max-width:500px) {
+                padding-top: 0;
+        
+            }
         }
     }
 }

@@ -15,6 +15,9 @@ export default defineNuxtConfig({
     },
     pageTransition: { name: 'page', mode: 'out-in' },
   },
+  site: {
+    url: 'https://paragonhydraulics.com'
+  },
   css: [
     "~/node_modules/bootstrap/dist/css/bootstrap.min.css",
     "~/assets/scss/main.scss",
@@ -29,6 +32,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/critters',
     '@nuxtjs/device',
+    '@nuxtjs/sitemap'
   ],
   device: {
     refreshOnResize: true
