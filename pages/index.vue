@@ -5,15 +5,15 @@
                   link="contactus"
                   text="Contact Us"/>
         <section>
-            <div class="p-0 m-0">
+            <div class="p-0 m-0 w-100">
                 <div class="row m-0 flex-column flex-md-row" style="background-color: rgba(0, 0, 0, 0.85);">
-                    <div class="col-12 col-md-8 align-self-center p-1" style="position: relative;">
+                    <div class="col-12 col-md-7 align-self-center p-1" style="position: relative;">
                         <p>Based in Chesapeake, Virginia, we are a veteran-owned firm dedicated to marine hydraulics repair.</p>
                         <p>Our services extend to the installation and maintenance of cranes, cargo handling equipment, deck and hull machinery, and marine hydraulics.</p>
                         <p>Additionally, we provide OEM Technical Representation for crane equipment and comprehensive solutions for the installation and repair of various shipboard mechanical systems.</p>
                         <div id="americanFlag" class="image-bg"></div>
                     </div>
-                    <div style="position: relative; min-height: 350px;" class="col-12 col-md-4 p-0">
+                    <div style="position: relative; min-height: 350px;" class="col-12 col-md-5 p-0">
                         <div id="homeCrane" class="image-bg"></div>
                     </div>
                 </div>

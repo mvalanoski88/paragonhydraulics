@@ -20,7 +20,7 @@
                 </div>
             </div>
         </section>
-        <section id="techServices">
+        <section id="techServices" class="justify-content-center">
             <div class="p-0 p-md-5 m-4">
                 <div class="row">
                     <div class="col-12 d-flex flex-column align-items-center">
