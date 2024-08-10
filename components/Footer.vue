@@ -16,7 +16,7 @@
                   <span>Iso 9001-2015 compliant</span>
                </div>
                <div class="d-flex p-0 justify-content-center justify-content-lg-end">
-                  <span>757-973-3773 | 711 falcon ave, chesapeake va, 23324</span>
+                  <span>757-937-3773 | 711 falcon ave, chesapeake va, 23324</span>
                </div>
                <div class="row d-flex flex-column flex-md-row p-0 w-100 m-0">
                <div class="d-flex p-0 justify-content-center justify-content-lg-end">

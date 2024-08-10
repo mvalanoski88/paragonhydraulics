@@ -23,8 +23,8 @@
                         </div>
                         <div class="row">
                             <div class="d-flex align-items-center p-0">
-                                <p v-if="isDesktopOrTablet" class="text-uppercase"><Icon icon="ion:call-sharp" />757-973-3773</p>
-                                <p v-else class="text-uppercase"><Icon icon="tabler:phone-call" /><a href="tel:757-973-3773">757-973-3773</a></p>
+                                <p v-if="isDesktopOrTablet" class="text-uppercase"><Icon icon="ion:call-sharp" />757-937-3773</p>
+                                <p v-else class="text-uppercase"><Icon icon="tabler:phone-call" /><a href="tel:757-937-3773">757-937-3773</a></p>
                             </div>
                         </div>
                     </div>

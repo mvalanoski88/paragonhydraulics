@@ -14,7 +14,7 @@
                     </div>
                     <div class="col-12 col-md-6 align-self-center p-1">
                         <p>Paragon Hydraulics recognized a significant gap in technical oversight for shipboard cargo and boat handling equipment, leading to substantial inefficiencies and associated costs for the US Navy.</p>
-                        <p>Our services extend to the installation and maintenance of cranes, cargo handling equipment, deck and huwe provide OEM Technical Representation for crane equipment and comprehensive solutions for the installation and repair of various shipboard mechanical systems.</p>
+                        <p>Our services extend to the installation and maintenance of crane, hull, deck and cargo handling equipment. We provide OEM technical representation for crane equipment and comprehensive solutions for the installation and repair of various shipboard mechanical systems.</p>
                         <p>With increasing threat of global conflict, the United States Navy must stay capable and ready to defend. Paragon Hydraulics assists in completing that mission the right way.</p>
                     </div>
                 </div>
@@ -78,7 +78,7 @@ const servicesProvided = [
                 {name : "009-90 support"},
                 {name : "Operations support"},
                 {name : "Remote technical support"},
-                {name : "GFM Storage"},
+                {name : "GFM storage"},
                 {name : "Hull and deck machinery"},
             ]
 

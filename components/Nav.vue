@@ -24,7 +24,7 @@
                             <NuxtLink @click="toggleMenuClose" :to="link.link">{{ link.name }}</NuxtLink>
                         </li>
                         <li v-if="$route.name != 'contactus'" data-v-1c703980="" class="mobile-menu-cta d-flex d-lg-none align-self-center mb-4 mb-md-0">
-                            <a href="tel:757-973-3773">
+                            <a href="tel:757-937-3773">
                                 <Icon icon="tabler:phone-call" />
                             </a>
                             <a href="mailto:rfq@paragonhydraulics.com?subject=RFQ Request">
