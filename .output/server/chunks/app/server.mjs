@@ -670,7 +670,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/aboutus-TNjXKu7A.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/aboutus-37wvDWvW.mjs').then((m) => m.default || m)
   },
   {
     name: "contactus",
@@ -678,7 +678,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/contactus-HlnvO4t-.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/contactus-N-b2XVDD.mjs').then((m) => m.default || m)
   },
   {
     name: "index",
@@ -686,7 +686,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-cr906JFG.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-7oNiEhWM.mjs').then((m) => m.default || m)
   },
   {
     name: "services",
@@ -694,7 +694,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/services-EoVgdJFr.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/services-9o8nJoTl.mjs').then((m) => m.default || m)
   }
 ];
 const _wrapIf = (component, props, slots) => {

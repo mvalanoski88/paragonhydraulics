@@ -1,4 +1,4 @@
-import { _ as __nuxt_component_0 } from './PageHero-MB27fyX-.mjs';
+import { _ as __nuxt_component_0 } from './PageHero-p2bic6k2.mjs';
 import { useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent } from 'vue/server-renderer';
 import { _ as _export_sfc } from '../server.mjs';
@@ -34,4 +34,4 @@ _sfc_main.setup = (props, ctx) => {
 const aboutus = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
 
 export { aboutus as default };
-//# sourceMappingURL=aboutus-TNjXKu7A.mjs.map
+//# sourceMappingURL=aboutus-37wvDWvW.mjs.map

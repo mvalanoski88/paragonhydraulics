@@ -1,4 +1,4 @@
-import { _ as __nuxt_component_0 } from './PageHero-MB27fyX-.mjs';
+import { _ as __nuxt_component_0 } from './PageHero-p2bic6k2.mjs';
 import { _ as __nuxt_component_1 } from './SectionHeader-eFyBVODl.mjs';
 import { b as useDevice } from '../server.mjs';
 import { ref, useSSRContext } from 'vue';
@@ -61,4 +61,4 @@ _sfc_main.setup = (props, ctx) => {
 };
 
 export { _sfc_main as default };
-//# sourceMappingURL=index-cr906JFG.mjs.map
+//# sourceMappingURL=index-7oNiEhWM.mjs.map

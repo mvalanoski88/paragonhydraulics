@@ -65,7 +65,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
   const _component_CtaButton = __nuxt_component_0$1;
   _push(`<section${ssrRenderAttrs(mergeProps({ id: $props.sectionId }, _attrs))}><div class="container">`);
   if ($props.pageTitle) {
-    _push(`<div class="row flex-column flex-md-row align-items-center"><div class="col-12 col-md-6 text-center text-md-start p-3 mb-5 mb-lg-0"><h1>${ssrInterpolate($props.pageTitle)}</h1></div><div class="col-12 col-md-6 p-0"><h2>${ssrInterpolate($props.pageHeading)}</h2></div></div>`);
+    _push(`<div class="row flex-column flex-md-row align-items-center"><div class="col-12 col-md-6 text-center text-md-start p-3 mb-2 mb-lg-0"><h1>${ssrInterpolate($props.pageTitle)}</h1></div><div class="col-12 col-md-6 p-0"><h2>${ssrInterpolate($props.pageHeading)}</h2></div></div>`);
   } else {
     _push(`<div class="row"><div class="col-12 text-center"><h1 class="home-hero-text">${ssrInterpolate($props.pageHeading)}</h1>`);
     _push(ssrRenderComponent(_component_CtaButton, {
@@ -86,4 +86,4 @@ _sfc_main.setup = (props, ctx) => {
 const __nuxt_component_0 = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
 
 export { __nuxt_component_0 as _ };
-//# sourceMappingURL=PageHero-MB27fyX-.mjs.map
+//# sourceMappingURL=PageHero-p2bic6k2.mjs.map

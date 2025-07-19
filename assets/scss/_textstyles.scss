@@ -61,8 +61,8 @@ h1 {
     margin-bottom: 0;
 
     @media (max-width:1000px) {
-        @include size-height(5.25rem, 4.55rem);
-        -webkit-text-stroke-width: 2px; 
+        @include size-height(3.55rem, 4.55rem);
+        -webkit-text-stroke-width: 1px; 
 
     }
 
@@ -79,7 +79,7 @@ h1 {
     -webkit-text-stroke-width: 0;
     
     @media (max-width:1000px) {
-        @include size-height(3.05rem, 4rem);
+        @include size-height(2.35rem, 2.75rem);
 
     }
 }
@@ -90,7 +90,7 @@ h2 {
     text-align: center;
 
     @media (max-width:1000px) {
-        @include size-height(2.5rem, 2.75rem);
+        @include size-height(2rem, 2.75rem);
 
     }
 

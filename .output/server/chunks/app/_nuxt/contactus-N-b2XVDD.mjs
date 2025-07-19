@@ -60,30 +60,33 @@ const _sfc_main = {
     const iframeWidth = computed(() => {
       return isDesktopOrTablet ? 1800 : 300;
     });
+    const iframeHeight = computed(() => {
+      return isDesktopOrTablet ? 350 : 250;
+    });
     return (_ctx, _push, _parent, _attrs) => {
       const _component_SectionHeader = __nuxt_component_1$1;
       const _component_ContactForm = __nuxt_component_1;
-      _push(`<main${ssrRenderAttrs(_attrs)} data-v-e16deb59><section id="contactus" data-v-e16deb59><div class="container" data-v-e16deb59><div class="row flex-column flex-md-row align-items-center" data-v-e16deb59><div class="col-12 col-md-5 text-center text-md-start" data-v-e16deb59><h1 data-v-e16deb59>CONTACT US</h1></div><div class="col-12 col-md-7 p-0" data-v-e16deb59><div class="row" data-v-e16deb59><div class="col-1 d-flex align-items-centers" data-v-e16deb59><p class="text-uppercase text-align-left" data-v-e16deb59>`);
+      _push(`<main${ssrRenderAttrs(_attrs)} data-v-2202a7e1><section id="contactus" data-v-2202a7e1><div class="container mt-5 mt-lg-0" data-v-2202a7e1><div class="row flex-column flex-md-row align-items-center" data-v-2202a7e1><div class="col-12 col-md-5 text-center text-md-start" data-v-2202a7e1><h1 data-v-2202a7e1>CONTACT US</h1></div><div class="col-12 col-md-7 p-0" data-v-2202a7e1><div class="row" data-v-2202a7e1><div class="col-1 d-flex align-items-centers" data-v-2202a7e1><p class="text-uppercase text-align-left" data-v-2202a7e1>`);
       _push(ssrRenderComponent(unref(Icon), { icon: "zondicons:location" }, null, _parent));
-      _push(`</p></div><div class="col-11 d-flex align-items-centers" data-v-e16deb59><p class="text-uppercase text-align-left lh-sm" data-v-e16deb59>711 falcon ave | chesapeake va, 23324</p></div></div><div class="row" data-v-e16deb59><div class="col-1 d-flex align-items-center" data-v-e16deb59><p class="text-uppercase" data-v-e16deb59>`);
+      _push(`</p></div><div class="col-11 d-flex align-items-centers" data-v-2202a7e1><p class="text-uppercase text-align-left lh-sm" data-v-2202a7e1>711 falcon ave | chesapeake va, 23324</p></div></div><div class="row" data-v-2202a7e1><div class="col-1 d-flex align-items-center" data-v-2202a7e1><p class="text-uppercase" data-v-2202a7e1>`);
       _push(ssrRenderComponent(unref(Icon), { icon: "tabler:mail-up" }, null, _parent));
-      _push(`</p></div><div class="col-11 d-flex align-items-center" data-v-e16deb59><p class="text-uppercase" data-v-e16deb59><a href="mailto:rfq@paragonhydraulics.com?subject=RFQ Request" data-v-e16deb59>rfq@paragonhydraulics.com</a></p></div></div>`);
+      _push(`</p></div><div class="col-11 d-flex align-items-center" data-v-2202a7e1><p class="text-uppercase" data-v-2202a7e1><a href="mailto:rfq@paragonhydraulics.com?subject=RFQ Request" data-v-2202a7e1>rfq@paragonhydraulics.com</a></p></div></div>`);
       if (unref(isDesktopOrTablet)) {
-        _push(`<div class="row" data-v-e16deb59><div class="col-1 d-flex align-items-center" data-v-e16deb59><p class="text-uppercase" data-v-e16deb59>`);
+        _push(`<div class="row" data-v-2202a7e1><div class="col-1 d-flex align-items-center" data-v-2202a7e1><p class="text-uppercase" data-v-2202a7e1>`);
         _push(ssrRenderComponent(unref(Icon), { icon: "ion:call-sharp" }, null, _parent));
-        _push(`</p></div><div class="col-11 d-flex align-items-center" data-v-e16deb59><p class="text-uppercase" data-v-e16deb59> 757-937-3773 </p></div></div>`);
+        _push(`</p></div><div class="col-11 d-flex align-items-center" data-v-2202a7e1><p class="text-uppercase" data-v-2202a7e1> 757-937-3773 </p></div></div>`);
       } else {
-        _push(`<div class="row" data-v-e16deb59><div class="col-1 d-flex align-items-center" data-v-e16deb59><p class="text-uppercase" data-v-e16deb59>`);
+        _push(`<div class="row" data-v-2202a7e1><div class="col-1 d-flex align-items-center" data-v-2202a7e1><p class="text-uppercase" data-v-2202a7e1>`);
         _push(ssrRenderComponent(unref(Icon), { icon: "tabler:phone-call" }, null, _parent));
-        _push(`</p></div><div class="col-11 d-flex align-items-center" data-v-e16deb59><p class="text-uppercase" data-v-e16deb59><a href="tel:757-937-3773" data-v-e16deb59>757-937-3773</a></p></div></div>`);
+        _push(`</p></div><div class="col-11 d-flex align-items-center" data-v-2202a7e1><p class="text-uppercase" data-v-2202a7e1><a href="tel:757-937-3773" data-v-2202a7e1>757-937-3773</a></p></div></div>`);
       }
       _push(`</div></div>`);
       if (iframeLoaded) {
-        _push(`<div class="row mt-5 mt-lg-4" data-v-e16deb59><div class="col-12 d-flex justify-content-center" data-v-e16deb59><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3195.518442376843!2d-76.2819904!3d36.7821183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89baa361505b8a3b%3A0x5183a2f8d4d3755!2sParagon%20Hydraulics!5e0!3m2!1sen!2sus!4v1752897307929!5m2!1sen!2sus"${ssrRenderAttr("width", iframeWidth.value)} height="350" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade" data-v-e16deb59></iframe></div></div>`);
+        _push(`<div class="row mt-4" data-v-2202a7e1><div class="col-12 d-flex justify-content-center" data-v-2202a7e1><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3195.518442376843!2d-76.2819904!3d36.7821183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89baa361505b8a3b%3A0x5183a2f8d4d3755!2sParagon%20Hydraulics!5e0!3m2!1sen!2sus!4v1752897307929!5m2!1sen!2sus"${ssrRenderAttr("width", iframeWidth.value)}${ssrRenderAttr("height", iframeHeight.value)} allowfullscreen="" referrerpolicy="no-referrer-when-downgrade" data-v-2202a7e1></iframe></div></div>`);
       } else {
-        _push(`<div class="row" data-v-e16deb59><div class="col-12 d-flex justify-content-center" data-v-e16deb59><p class="text-center" data-v-e16deb59>Loading map...</p></div></div>`);
+        _push(`<div class="row" data-v-2202a7e1><div class="col-12 d-flex justify-content-center" data-v-2202a7e1><p class="text-center" data-v-2202a7e1>Loading map...</p></div></div>`);
       }
-      _push(`</div></section><section id="contactForm" class="justify-content-center" data-v-e16deb59><div class="contact-us-form m-0 mb-5 p-0 mt-4 mt-md-5" data-v-e16deb59>`);
+      _push(`</div></section><section id="contactForm" class="justify-content-center" data-v-2202a7e1><div class="contact-us-form m-0 mb-5 p-0 mt-4 mt-md-5" data-v-2202a7e1>`);
       _push(ssrRenderComponent(_component_SectionHeader, {
         class: "mb-4",
         heading: "Send Us an RFQ",
@@ -100,7 +103,7 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/contactus.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const contactus = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-e16deb59"]]);
+const contactus = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-2202a7e1"]]);
 
 export { contactus as default };
-//# sourceMappingURL=contactus-HlnvO4t-.mjs.map
+//# sourceMappingURL=contactus-N-b2XVDD.mjs.map
