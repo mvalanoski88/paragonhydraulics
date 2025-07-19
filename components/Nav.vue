@@ -2,7 +2,7 @@
     <header>
         <div @click="toggleMenuClose" :class="{'mobile-overlay' : mobileNav}"></div>
         <nav class="w-100" :class="{ 'scrolled-nav' : scrollPosition, 'scrolled-nav-open' : mobileNav }">
-            <div class="row align-items-center">
+            <div class="row align-items-center justify-content-md-between">
                 <div class="col-6 col-md-4">
                     <NuxtLink :class="{'d-none' : mobileNav}" to="/">
                         <img id="mainLogo" width="290" height="130" src="https://s3.amazonaws.com/assets.paragonhydraulics.com/img/phlogo_backup.png" alt="Paragon Hydraulics Logo"/>
@@ -20,7 +20,7 @@
                 </div>
                 <transition name="mobile-nav">
                     <ul class="p-0 pl-md-4 dropdown-nav" v-if="mobileNav">
-                        <li class="mb-4 mb-md-0" v-for="link in navlinks">
+                        <li class="mb-4 mb-lg-0" v-for="link in navlinks">
                             <NuxtLink @click="toggleMenuClose" :to="link.link">{{ link.name }}</NuxtLink>
                         </li>
                         <li v-if="$route.name != 'contactus'" data-v-1c703980="" class="mobile-menu-cta d-flex d-lg-none align-self-center mb-4 mb-md-0">

@@ -7,21 +7,20 @@
         <section>
             <div class="p-0 m-0 w-100">
                 <div class="row m-0 flex-column flex-md-row" style="background-color: rgba(0, 0, 0, 0.85);">
-                    <div class="col-12 col-md-7 align-self-center p-1" style="position: relative;">
-                        <p>Based in Chesapeake, Virginia, we are a veteran-owned firm dedicated to marine hydraulics repair.</p>
-                        <p>Our services extend to the installation and maintenance of cranes, cargo handling equipment, deck and hull machinery, and marine hydraulics.</p>
+                    <div class="position-relative col-12 col-md-7 align-self-center p-5">
+                        <p>Based in Chesapeake, Virginia, we are a veteran-owned firm dedicated to marine hydraulics repair. Our services extend to the installation and maintenance of cranes, cargo handling equipment, deck and hull machinery, and marine hydraulics.</p>
                         <p>Additionally, we provide OEM Technical Representation for crane equipment and comprehensive solutions for the installation and repair of various shipboard mechanical systems.</p>
                         <div id="americanFlag" class="image-bg"></div>
                     </div>
-                    <div style="position: relative; min-height: 350px;" class="col-12 col-md-5 p-0">
+                    <div class="position-relative col-12 col-md-5 p-0" style="min-height: 350px;">
                         <div id="homeCrane" class="image-bg"></div>
                     </div>
                 </div>
             </div>
         </section>
         <section id="customers" class="justify-content-center">
-            <div class="container p-5 m-0">
-                <div class="row">
+            <div class="container m-0">
+                <div class="row p-4">
                     <div class="col-12">
                         <SectionHeader class="text-center" heading="Some of our customers" :style="'light'" />
                         <div class="row mt-0 mt-md-5">

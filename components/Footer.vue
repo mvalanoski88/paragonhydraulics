@@ -1,7 +1,7 @@
 <template>
 <footer style="background-color: #d3d3d3;" class="p-4">
    <div class="w-100">
-      <div class="row d-flex flex-column flex-md-row m-0">
+      <div class="row d-flex flex-column flex-md-row justify-content-between m-0">
          <div class="col-12 col-md-4">
             <div class="row">
                <div class="col-12 d-flex d-lg-block align-items-center justify-content-center justify-content-md-start">
@@ -10,13 +10,13 @@
                 </div>
             </div>
          </div>
-         <div class="col-12 col-md-8 d-flex align-items-center justify-content-center justify-content-md-end p-0 m-0">
+         <div class="col-12 col-md-5 col-lg-8 d-flex align-items-center justify-content-center justify-content-md-end p-0 m-0">
             <div class="d-flex row footer-text text-uppercase">
                <div class="d-flex p-0 justify-content-center justify-content-lg-end">
                   <span>Iso 9001-2015 compliant</span>
                </div>
                <div class="d-flex p-0 justify-content-center justify-content-lg-end">
-                  <span>757-973-3773 | 711 falcon ave, chesapeake va, 23324</span>
+                  <span>757-973-3773 | <a class="text-decoration-none" href="https://maps.app.goo.gl/HDFT6u3Lu4PESYWZA">711 falcon ave, chesapeake va, 23324</a></span>
                </div>
                <div class="row d-flex flex-column flex-md-row p-0 w-100 m-0">
                <div class="d-flex p-0 justify-content-center justify-content-lg-end">

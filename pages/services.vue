@@ -12,7 +12,7 @@
                         </div>
                         <div id="harborCrane" class="image-bg"></div>
                     </div>
-                    <div class="col-12 col-md-6 align-self-center p-1">
+                    <div class="col-12 col-md-6 align-self-center p-4 p-lg-5">
                         <p>Paragon Hydraulics recognized a significant gap in technical oversight for shipboard cargo and boat handling equipment, leading to substantial inefficiencies and associated costs for the US Navy.</p>
                         <p>Our services extend to the installation and maintenance of cranes, cargo handling equipment, deck and huwe provide OEM Technical Representation for crane equipment and comprehensive solutions for the installation and repair of various shipboard mechanical systems.</p>
                         <p>With increasing threat of global conflict, the United States Navy must stay capable and ready to defend. Paragon Hydraulics assists in completing that mission the right way.</p>
@@ -25,14 +25,16 @@
                 <div class="row">
                     <div class="col-12 d-flex flex-column align-items-center">
                         <SectionHeader heading="General technical services" :style="'light'" />
-                        <div class="row mt-5">
-                            <ul class="services-provided">
-                                <li v-for="name in servicesProvided">
-                                    {{ name.name }}
-                                </li>
-                            </ul>
+                        <div class="row p-3 mt-3 mt-lg-5 justify-content-lg-center">
+                            <div class="col-12 col-lg-10">
+                                <ul class="services-provided w-100 w-lg-75 mx-lg-auto">
+                                    <li v-for="name in servicesProvided">
+                                        {{ name.name }}
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="row red">
+                        <div class="row p-3 red">
                         <div class="p-0 col-12">
                             <div class="row mt-3">
                                 <h4 class="text-center">who we provide services to</h4>
@@ -85,13 +87,11 @@ const servicesProvided = [
 </script>
 <style lang="scss" scoped>
 ul {
-    padding-inline: 3rem;
-    columns: 3;
-    @media (max-width:800px) {
-        columns:2
-    }
+    columns:2;
+    padding: 0;
+
     @media (max-width:500px) {
-        columns:2
+        columns:1
     }
 
     li {
@@ -102,12 +102,11 @@ ul {
     }
 
     &.services-provided {
-        text-align: center;
         list-style: inside;
+        grid-column-gap: 100px;
 
-        @media (max-width:500px) {
-            columns: 1;
-            text-align: left;
+        @media (max-width:800px) {
+            columns: 2;
     }
     }
 }
