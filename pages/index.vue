@@ -39,6 +39,7 @@
 import { ref } from 'vue';
 
 const { isDesktopOrTablet } = useDevice()
+const config = useAppConfig()
 
 const logos = ref([
                 {name : "usnavy", altText : "US Navy Logo"},
@@ -47,8 +48,8 @@ const logos = ref([
                 {name : "navsea", altText : "NAVSEA Logo"},
             ])
 const getLogoSrc = (logo) => {
-     return isDesktopOrTablet ? `https://s3.amazonaws.com/assets.paragonhydraulics.com/img/${logo.name}.png`
-                         : `https://s3.amazonaws.com/assets.paragonhydraulics.com/img/${logo.name}.webp`;
+     return isDesktopOrTablet ? `${config.paragonConsts.AWS_IMG_DIR}${logo.name}.png`
+                         : `${config.paragonConsts.AWS_IMG_DIR}${logo.name}.webp`;
 }
 
 </script>

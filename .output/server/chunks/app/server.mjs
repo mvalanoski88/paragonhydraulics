@@ -1,9 +1,9 @@
 import { version, ref, watchEffect, watch, getCurrentInstance, defineComponent, provide, shallowReactive, h, inject, Suspense, nextTick, Transition, hasInjectionContext, unref, computed, resolveComponent, useSSRContext, createApp, effectScope, reactive, withCtx, createVNode, createTextVNode, toDisplayString, mergeProps, defineAsyncComponent, onErrorCaptured, onServerPrefetch, resolveDynamicComponent, toRef, shallowRef, isReadonly, isRef, isShallow, isReactive, toRaw } from 'vue';
-import { d as useRuntimeConfig$1, $ as $fetch, h as createError$1, l as defu, m as hasProtocol, j as joinURL, p as parseURL, n as parseQuery, o as createHooks, w as withQuery, q as isScriptProtocol, r as withTrailingSlash, t as withoutTrailingSlash, v as sanitizeStatusCode, x as getRequestHeaders } from '../nitro/node-server.mjs';
+import { d as useRuntimeConfig$1, $ as $fetch, h as createError$1, l as klona, m as defu, n as defuFn, o as hasProtocol, j as joinURL, p as parseURL, q as parseQuery, r as createHooks, w as withQuery, t as isScriptProtocol, v as withTrailingSlash, x as withoutTrailingSlash, y as sanitizeStatusCode, z as getRequestHeaders } from '../nitro/node-server.mjs';
 import { getActiveHead } from 'unhead';
 import { defineHeadPlugin, composableNames, unpackMeta } from '@unhead/shared';
 import { RouterView, createMemoryHistory, createRouter, START_LOCATION } from 'vue-router';
-import { ssrRenderAttrs, ssrRenderClass, ssrRenderComponent, ssrRenderList, ssrInterpolate, ssrRenderSuspense, ssrRenderVNode } from 'vue/server-renderer';
+import { ssrRenderAttrs, ssrRenderClass, ssrRenderComponent, ssrRenderAttr, ssrRenderList, ssrInterpolate, ssrRenderSuspense, ssrRenderVNode } from 'vue/server-renderer';
 import { Icon } from '@iconify/vue';
 import 'node:http';
 import 'node:https';
@@ -306,6 +306,9 @@ function useRuntimeConfig() {
 }
 function defineGetter(obj, key, val) {
   Object.defineProperty(obj, key, { get: () => val });
+}
+function defineAppConfig(config) {
+  return config;
 }
 version.startsWith("3");
 function resolveUnref(r) {
@@ -670,7 +673,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/aboutus-37wvDWvW.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/aboutus-SivNwhB3.mjs').then((m) => m.default || m)
   },
   {
     name: "contactus",
@@ -678,7 +681,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/contactus-N-b2XVDD.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/contactus-BhJJdRhy.mjs').then((m) => m.default || m)
   },
   {
     name: "index",
@@ -686,7 +689,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/index-7oNiEhWM.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/index-FCK1Lo61.mjs').then((m) => m.default || m)
   },
   {
     name: "services",
@@ -694,7 +697,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/services-9o8nJoTl.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/services-axrIXf85.mjs').then((m) => m.default || m)
   }
 ];
 const _wrapIf = (component, props, slots) => {
@@ -796,6 +799,24 @@ const validate = /* @__PURE__ */ defineNuxtRouteMiddleware(async (to) => {
     return result;
   }
 });
+const cfg0 = defineAppConfig({
+  paragonConsts: {
+    AWS_IMG_DIR: "https://s3.amazonaws.com/assets.paragonhydraulics.com/img/"
+  }
+});
+const inlineConfig = {
+  "nuxt": {
+    "buildId": "a5002ab0-437e-40ca-8257-c4ce5676e0fb"
+  }
+};
+const __appConfig = /* @__PURE__ */ defuFn(cfg0, inlineConfig);
+function useAppConfig() {
+  const nuxtApp = /* @__PURE__ */ useNuxtApp();
+  if (!nuxtApp._appConfig) {
+    nuxtApp._appConfig = klona(__appConfig);
+  }
+  return nuxtApp._appConfig;
+}
 const manifest_45route_45rule = /* @__PURE__ */ defineNuxtRouteMiddleware(async (to) => {
   {
     return;
@@ -1427,6 +1448,7 @@ const _sfc_main$4 = {
   __name: "Nav",
   __ssrInlineRender: true,
   setup(__props) {
+    const config = useAppConfig();
     useDevice();
     const navlinks = ref([
       { name: "Home", link: "/" },
@@ -1445,23 +1467,23 @@ const _sfc_main$4 = {
     }
     return (_ctx, _push, _parent, _attrs) => {
       const _component_NuxtLink = __nuxt_component_0$1;
-      _push(`<header${ssrRenderAttrs(_attrs)} data-v-eb3f27d3><div class="${ssrRenderClass({ "mobile-overlay": mobileNav.value })}" data-v-eb3f27d3></div><nav class="${ssrRenderClass([{ "scrolled-nav": scrollPosition.value, "scrolled-nav-open": mobileNav.value }, "w-100"])}" data-v-eb3f27d3><div class="row align-items-center justify-content-md-between" data-v-eb3f27d3><div class="col-6 col-md-4" data-v-eb3f27d3>`);
+      _push(`<header${ssrRenderAttrs(_attrs)} data-v-edf140dd><div class="${ssrRenderClass({ "mobile-overlay": mobileNav.value })}" data-v-edf140dd></div><nav class="${ssrRenderClass([{ "scrolled-nav": scrollPosition.value, "scrolled-nav-open": mobileNav.value }, "w-100"])}" data-v-edf140dd><div class="row align-items-center justify-content-md-between" data-v-edf140dd><div class="col-6 col-md-4" data-v-edf140dd>`);
       _push(ssrRenderComponent(_component_NuxtLink, {
         class: { "d-none": mobileNav.value },
         to: "/"
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<img id="mainLogo" width="290" height="130" src="https://s3.amazonaws.com/assets.paragonhydraulics.com/img/phlogo_backup.png" alt="Paragon Hydraulics Logo" data-v-eb3f27d3${_scopeId}>`);
+            _push2(`<img id="mainLogo" width="290" height="130"${ssrRenderAttr("src", `${unref(config).paragonConsts.AWS_IMG_DIR}phlogo.webp`)} alt="Paragon Hydraulics Logo" data-v-edf140dd${_scopeId}>`);
           } else {
             return [
               createVNode("img", {
                 id: "mainLogo",
                 width: "290",
                 height: "130",
-                src: "https://s3.amazonaws.com/assets.paragonhydraulics.com/img/phlogo_backup.png",
+                src: `${unref(config).paragonConsts.AWS_IMG_DIR}phlogo.webp`,
                 alt: "Paragon Hydraulics Logo"
-              })
+              }, null, 8, ["src"])
             ];
           }
         }),
@@ -1469,9 +1491,9 @@ const _sfc_main$4 = {
       }, _parent));
       _push(`</div>`);
       if (!mobile.value) {
-        _push(`<div class="desktop d-flex col-6 col-md-8 p-0 justify-content-end" data-v-eb3f27d3><ul class="p-0 pl-md-4 d-inline-flex" data-v-eb3f27d3><!--[-->`);
+        _push(`<div class="desktop d-flex col-6 col-md-8 p-0 justify-content-end" data-v-edf140dd><ul class="p-0 pl-md-4 d-inline-flex" data-v-edf140dd><!--[-->`);
         ssrRenderList(navlinks.value, (link) => {
-          _push(`<li class="mb-4 mb-md-0" data-v-eb3f27d3>`);
+          _push(`<li class="mb-4 mb-md-0" data-v-edf140dd>`);
           _push(ssrRenderComponent(_component_NuxtLink, {
             to: link.link
           }, {
@@ -1493,7 +1515,7 @@ const _sfc_main$4 = {
         _push(`<!---->`);
       }
       if (mobile.value) {
-        _push(`<div class="col-6 d-flex justify-content-end" data-v-eb3f27d3>`);
+        _push(`<div class="col-6 d-flex justify-content-end" data-v-edf140dd>`);
         _push(ssrRenderComponent(unref(Icon), {
           onClick: toggleMenuOpen,
           class: { "mobile-icon": mobileNav.value },
@@ -1504,9 +1526,9 @@ const _sfc_main$4 = {
         _push(`<!---->`);
       }
       if (mobileNav.value) {
-        _push(`<ul class="p-0 pl-md-4 dropdown-nav" data-v-eb3f27d3><!--[-->`);
+        _push(`<ul class="p-0 pl-md-4 dropdown-nav" data-v-edf140dd><!--[-->`);
         ssrRenderList(navlinks.value, (link) => {
-          _push(`<li class="mb-4 mb-lg-0" data-v-eb3f27d3>`);
+          _push(`<li class="mb-4 mb-lg-0" data-v-edf140dd>`);
           _push(ssrRenderComponent(_component_NuxtLink, {
             onClick: toggleMenuClose,
             to: link.link
@@ -1526,9 +1548,9 @@ const _sfc_main$4 = {
         });
         _push(`<!--]-->`);
         if (_ctx.$route.name != "contactus") {
-          _push(`<li data-v-1c703980="" class="mobile-menu-cta d-flex d-lg-none align-self-center mb-4 mb-md-0" data-v-eb3f27d3><a href="tel:757-973-3773" data-v-eb3f27d3>`);
+          _push(`<li data-v-1c703980="" class="mobile-menu-cta d-flex d-lg-none align-self-center mb-4 mb-md-0" data-v-edf140dd><a href="tel:757-973-3773" data-v-edf140dd>`);
           _push(ssrRenderComponent(unref(Icon), { icon: "tabler:phone-call" }, null, _parent));
-          _push(`</a><a href="mailto:rfq@paragonhydraulics.com?subject=RFQ Request" data-v-eb3f27d3>`);
+          _push(`</a><a href="mailto:rfq@paragonhydraulics.com?subject=RFQ Request" data-v-edf140dd>`);
           _push(ssrRenderComponent(unref(Icon), { icon: "mdi:email-edit-outline" }, null, _parent));
           _push(`</a></li>`);
         } else {
@@ -1548,7 +1570,7 @@ _sfc_main$4.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Nav.vue");
   return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
-const __nuxt_component_0 = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__scopeId", "data-v-eb3f27d3"]]);
+const __nuxt_component_0 = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__scopeId", "data-v-edf140dd"]]);
 const RouteProvider = defineComponent({
   props: {
     vnode: {
@@ -1692,31 +1714,32 @@ const _sfc_main$3 = {
   __name: "Footer",
   __ssrInlineRender: true,
   setup(__props) {
+    const config = useAppConfig();
     return (_ctx, _push, _parent, _attrs) => {
       const _component_NuxtLink = __nuxt_component_0$1;
       _push(`<footer${ssrRenderAttrs(mergeProps({
         style: { "background-color": "#d3d3d3" },
         class: "p-4"
-      }, _attrs))} data-v-fc4bbdc7><div class="w-100" data-v-fc4bbdc7><div class="row d-flex flex-column flex-md-row justify-content-between m-0" data-v-fc4bbdc7><div class="col-12 col-md-4" data-v-fc4bbdc7><div class="row" data-v-fc4bbdc7><div class="col-12 d-flex d-lg-block align-items-center justify-content-center justify-content-md-start" data-v-fc4bbdc7>`);
+      }, _attrs))} data-v-4b0466ec><div class="w-100" data-v-4b0466ec><div class="row d-flex flex-column flex-md-row justify-content-between m-0" data-v-4b0466ec><div class="col-12 col-md-4" data-v-4b0466ec><div class="row" data-v-4b0466ec><div class="col-12 d-flex d-lg-block align-items-center justify-content-center justify-content-md-start" data-v-4b0466ec>`);
       _push(ssrRenderComponent(_component_NuxtLink, { to: "/" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<img src="https://s3.amazonaws.com/assets.paragonhydraulics.com/img/phlogo_black.png" width="175" alt="Paragon Hydraulics Logo" data-v-fc4bbdc7${_scopeId}>`);
+            _push2(`<img${ssrRenderAttr("src", `${unref(config).paragonConsts.AWS_IMG_DIR}phlogo_black.webp`)} width="175" alt="Paragon Hydraulics Logo" data-v-4b0466ec${_scopeId}>`);
           } else {
             return [
               createVNode("img", {
-                src: "https://s3.amazonaws.com/assets.paragonhydraulics.com/img/phlogo_black.png",
+                src: `${unref(config).paragonConsts.AWS_IMG_DIR}phlogo_black.webp`,
                 width: "175",
                 alt: "Paragon Hydraulics Logo"
-              })
+              }, null, 8, ["src"])
             ];
           }
         }),
         _: 1
       }, _parent));
-      _push(`<img class="mx-0 mx-md-2" src="https://s3.amazonaws.com/assets.paragonhydraulics.com/img/vsralogo_bw.png" width="110" alt="VSRA Logo" data-v-fc4bbdc7></div></div></div><div class="col-12 col-md-5 col-lg-8 d-flex align-items-center justify-content-center justify-content-md-end p-0 m-0" data-v-fc4bbdc7><div class="d-flex row footer-text text-uppercase" data-v-fc4bbdc7><div class="d-flex p-0 justify-content-center justify-content-lg-end" data-v-fc4bbdc7><span data-v-fc4bbdc7>Iso 9001-2015 compliant</span></div><div class="d-flex p-0 justify-content-center justify-content-lg-end" data-v-fc4bbdc7><span data-v-fc4bbdc7>757-973-3773 | <a class="text-decoration-none" href="https://maps.app.goo.gl/HDFT6u3Lu4PESYWZA" data-v-fc4bbdc7>711 falcon ave, chesapeake va, 23324</a></span></div><div class="row d-flex flex-column flex-md-row p-0 w-100 m-0" data-v-fc4bbdc7><div class="d-flex p-0 justify-content-center justify-content-lg-end" data-v-fc4bbdc7><span class="footer-credit" data-v-fc4bbdc7>`);
+      _push(`<img class="mx-0 mx-md-2"${ssrRenderAttr("src", `${unref(config).paragonConsts.AWS_IMG_DIR}vsralogo_bw.webp`)} width="110" alt="VSRA Logo" data-v-4b0466ec></div></div></div><div class="col-12 col-md-5 col-lg-8 d-flex align-items-center justify-content-center justify-content-md-end p-0 m-0" data-v-4b0466ec><div class="d-flex row footer-text text-uppercase" data-v-4b0466ec><div class="d-flex p-0 justify-content-center justify-content-lg-end" data-v-4b0466ec><span data-v-4b0466ec>Iso 9001-2015 compliant</span></div><div class="d-flex p-0 justify-content-center justify-content-lg-end" data-v-4b0466ec><span data-v-4b0466ec>757-973-3773 | <a class="text-decoration-none" href="https://maps.app.goo.gl/HDFT6u3Lu4PESYWZA" data-v-4b0466ec>711 falcon ave, chesapeake va, 23324</a></span></div><div class="row d-flex flex-column flex-md-row p-0 w-100 m-0" data-v-4b0466ec><div class="d-flex p-0 justify-content-center justify-content-lg-end" data-v-4b0466ec><span class="footer-credit" data-v-4b0466ec>`);
       _push(ssrRenderComponent(unref(Icon), { icon: "ic:twotone-build-circle" }, null, _parent));
-      _push(`Developed by <a href="https://oceanfrontcreative.com" target="_blank" data-v-fc4bbdc7>Oceanfront Creative</a></span></div></div></div></div></div></div></footer>`);
+      _push(`Developed by <a href="https://oceanfrontcreative.com" target="_blank" data-v-4b0466ec>Oceanfront Creative</a></span></div></div></div></div></div></div></footer>`);
     };
   }
 };
@@ -1726,7 +1749,7 @@ _sfc_main$3.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Footer.vue");
   return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-const __nuxt_component_2 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-fc4bbdc7"]]);
+const __nuxt_component_2 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-4b0466ec"]]);
 const _sfc_main$2 = {
   __name: "app",
   __ssrInlineRender: true,
@@ -1879,5 +1902,5 @@ let entry;
 }
 const entry$1 = (ssrContext) => entry(ssrContext);
 
-export { _export_sfc as _, __nuxt_component_0$1 as a, useDevice as b, createError as c, entry$1 as default, useHead as u };
+export { _export_sfc as _, __nuxt_component_0$1 as a, useDevice as b, createError as c, useAppConfig as d, entry$1 as default, useHead as u };
 //# sourceMappingURL=server.mjs.map

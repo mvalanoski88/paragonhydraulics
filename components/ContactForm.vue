@@ -1,6 +1,6 @@
 <template>
     <div class="row justify-content-center mx-0">
-        <div class="col-8">
+        <div class="col-10 col-lg-12">
             <form id="PHRFQ">
                 <label>Name
                 <input type="text" id="name" name="name" maxlength="35" v-model="name" required></label>

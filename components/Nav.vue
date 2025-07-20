@@ -5,7 +5,7 @@
             <div class="row align-items-center justify-content-md-between">
                 <div class="col-6 col-md-4">
                     <NuxtLink :class="{'d-none' : mobileNav}" to="/">
-                        <img id="mainLogo" width="290" height="130" src="https://s3.amazonaws.com/assets.paragonhydraulics.com/img/phlogo_backup.png" alt="Paragon Hydraulics Logo"/>
+                        <img id="mainLogo" width="290" height="130" :src="`${config.paragonConsts.AWS_IMG_DIR}phlogo.webp`" alt="Paragon Hydraulics Logo"/>
                     </NuxtLink>
                 </div>
                 <div v-if="!mobile" class="desktop d-flex col-6 col-md-8 p-0 justify-content-end">
@@ -40,6 +40,8 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { Icon } from '@iconify/vue';
+
+const config = useAppConfig()
 
 const { isMobileOrTablet } = useDevice()
 

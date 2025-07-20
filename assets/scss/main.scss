@@ -48,7 +48,7 @@ body {
         }
 
         &#home {
-            background-image: url(/craneshero2.jpg);
+            background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/craneshero2.jpg);
 
             @media (max-width:500px) {
                 background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/craneshero2.webp);
@@ -57,7 +57,7 @@ body {
             }
         }
         &#services {
-            background-image: url(/phnorfolk_trumanship.jpg);
+            background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/phnorfolk_trumanship.jpg);
 
             @media (max-width:500px) {
                 background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/norfolkship.webp);
@@ -66,7 +66,7 @@ body {
             }
         }
         &#aboutus {
-            background-image: url(/boat-1451202_1920.jpg);
+            background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/boat-1451202_1920.jpg);
 
             @media (max-width:500px) {
                 background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/militaryship2.webp);
@@ -74,7 +74,7 @@ body {
             }
         }
         &#contactus {
-            background-image: url(/sarah-dann-5765396_1920.jpg);
+            background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/sarah-dann-5765396_1920.jpg);
 
             @media (max-width:500px) {
                 background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/rig.webp);
@@ -90,6 +90,12 @@ body {
                 padding-top: 0;
         
             }
+        }
+    }
+
+    .w-lg-75 {
+        @media (min-width: 992px) {
+            width: 75% !important;
         }
     }
 }

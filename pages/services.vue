@@ -21,27 +21,27 @@
             </div>
         </section>
         <section id="techServices" class="justify-content-center">
-            <div class="p-0 p-md-5 m-4">
+            <div class="p-4 p-md-5">
                 <div class="row">
                     <div class="col-12 d-flex flex-column align-items-center">
                         <SectionHeader heading="General technical services" :style="'light'" />
-                        <div class="row p-3 mt-3 mt-lg-5 justify-content-lg-center">
-                            <div class="col-12 col-lg-10">
-                                <ul class="services-provided w-100 w-lg-75 mx-lg-auto">
+                        <div class="row w-lg-75 p-3 mt-3 mt-lg-5 justify-content-lg-center">
+                            <div class="col-12">
+                                <ul class="services-provided">
                                     <li v-for="name in servicesProvided">
                                         {{ name.name }}
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="row p-3 red">
+                        <div class="row p-1 p-lg-3 red">
                         <div class="p-0 col-12">
                             <div class="row mt-3">
                                 <h4 class="text-center">who we provide services to</h4>
                             </div>
                             <div class="row mt-4">
-                                <ul class="text-center">
-                                    <li class="clients" v-for="name in serviceClients">
+                                <ul class="clients text-center">
+                                    <li v-for="name in serviceClients">
                                         {{ name.name }}
                                     </li>
                                 </ul>
@@ -97,17 +97,13 @@ ul {
     li {
         margin: 0;
     }
-    li.clients::marker {
+    ul.clients li::marker {
         content: '' !important;
     }
 
     &.services-provided {
         list-style: inside;
         grid-column-gap: 100px;
-
-        @media (max-width:800px) {
-            columns: 2;
-    }
     }
 }
 </style>

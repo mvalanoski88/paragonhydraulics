@@ -5,8 +5,8 @@
          <div class="col-12 col-md-4">
             <div class="row">
                <div class="col-12 d-flex d-lg-block align-items-center justify-content-center justify-content-md-start">
-                    <NuxtLink to="/"><img src="https://s3.amazonaws.com/assets.paragonhydraulics.com/img/phlogo_black.png" width="175" alt="Paragon Hydraulics Logo"/></NuxtLink>
-                    <img class="mx-0 mx-md-2" src="https://s3.amazonaws.com/assets.paragonhydraulics.com/img/vsralogo_bw.png" width="110" alt="VSRA Logo" />
+                    <NuxtLink to="/"><img :src="`${config.paragonConsts.AWS_IMG_DIR}phlogo_black.webp`" width="175" alt="Paragon Hydraulics Logo"/></NuxtLink>
+                    <img class="mx-0 mx-md-2" :src="`${config.paragonConsts.AWS_IMG_DIR}vsralogo_bw.webp`" width="110" alt="VSRA Logo" />
                 </div>
             </div>
          </div>
@@ -31,6 +31,9 @@
 </template>
 <script setup>
 import { Icon } from '@iconify/vue';
+
+const config = useAppConfig();
+
 </script>
 <style lang="scss" scoped>
 div.footer-text {

@@ -47,7 +47,7 @@ p {
 }
 
 .disclaimer-text {
-    @include size-height(0.55rem, 1.25rem);
+    @include size-height(0.75rem, 1.25rem);
     font-style: italic;
     text-align: center;
     padding: 0.25rem;
@@ -130,21 +130,29 @@ nav {
     padding: 1rem 2.5rem 0 2.5rem;
 }
 
-#techServices li {
-    list-style-type: none;
-    color: $paragon-white;
-    @include size-height(1.75rem, 2.55rem);
-    margin-bottom: 1rem;
+#techServices {
+    li  {
+        list-style-type: none;
+        color: $paragon-white;
+        @include size-height(1.75rem, 2.55rem);
+        margin-bottom: 0.75rem;
 
-    &::marker {
+        @media (max-width:1000px) {
+            @include size-height(0.85rem, 1.85rem);
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid $paragon-white-faded;
+        }
+    }
+
+    .services-provided li::marker {
         position: absolute;
         top: 5em;
         content: url('https://api.iconify.design/iconamoon/shield-yes-duotone.svg?color=white&width=20');
     }
 
-    @media (max-width:1000px) {
-        @include size-height(1rem, 1.85rem);
-
+    .clients li {
+        border-bottom: none;
+        margin-bottom: 0;
     }
 }
 
