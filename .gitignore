@@ -21,6 +21,7 @@ logs
 *.txt
 .png
 .psd
+localassets
 
 # Local env files
 .env
