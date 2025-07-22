@@ -2,11 +2,11 @@
     <main>
         <section id="contactus">
             <div class="container mt-5 mt-lg-0">
-                <div class="row flex-column flex-md-row align-items-center">
-                    <div class="col-12 col-md-5 text-center text-md-start">
+                <div class="row flex-column flex-lg-row align-items-center md:align-content-start">
+                    <div class="col-12 col-lg-5 text-center text-md-start">
                         <h1>CONTACT US</h1>
                     </div>
-                    <div class="col-12 col-md-7 p-0">
+                    <div class="col-12 col-lg-7 p-0">
                         <div class="row">
                             <div class="col-1 d-flex align-items-centers">
                                 <p class="text-uppercase text-align-left">
@@ -93,7 +93,7 @@ function iframeLoaded() {
 const { isDesktopOrTablet } = useDevice()
 
 const iframeWidth = computed(() => {
-  return isDesktopOrTablet ? 1800 : 300
+  return isDesktopOrTablet ? 1800 : 400
 })
 
 const iframeHeight = computed(() => {

@@ -16,11 +16,11 @@
                   <span>Iso 9001-2015 compliant</span>
                </div>
                <div class="d-flex p-0 justify-content-center justify-content-lg-end">
-                  <span>757-973-3773 | <a class="text-decoration-none" href="https://maps.app.goo.gl/HDFT6u3Lu4PESYWZA">711 falcon ave, chesapeake va, 23324</a></span>
+                  <span><a class="text-decoration-none" href="tel:757-973-3773">757-973-3773</a> | <a class="text-decoration-none" href="https://maps.app.goo.gl/HDFT6u3Lu4PESYWZA">711 falcon ave, chesapeake va, 23324</a></span>
                </div>
                <div class="row d-flex flex-column flex-md-row p-0 w-100 m-0">
                <div class="d-flex p-0 justify-content-center justify-content-lg-end">
-                  <span class="footer-credit"><Icon icon="ic:twotone-build-circle" />Developed by <a href="https://oceanfrontcreative.com" target="_blank">Oceanfront Creative</a></span>
+                  <span class="footer-credit"><Icon icon="ic:twotone-build-circle" />Built & Managed by <a href="https://oceanfrontcreative.com/?utm_source=ParagonHydraulics&utm_medium=referral" target="_blank">Oceanfront Creative</a></span>
                </div>
                </div>
             </div>

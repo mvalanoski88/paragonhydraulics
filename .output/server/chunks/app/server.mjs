@@ -681,7 +681,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import('./_nuxt/contactus-BhJJdRhy.mjs').then((m) => m.default || m)
+    component: () => import('./_nuxt/contactus-gxVW9Qte.mjs').then((m) => m.default || m)
   },
   {
     name: "index",
@@ -806,7 +806,7 @@ const cfg0 = defineAppConfig({
 });
 const inlineConfig = {
   "nuxt": {
-    "buildId": "a5002ab0-437e-40ca-8257-c4ce5676e0fb"
+    "buildId": "411a4e31-e876-41d7-9852-73d530b5f369"
   }
 };
 const __appConfig = /* @__PURE__ */ defuFn(cfg0, inlineConfig);
@@ -1720,11 +1720,11 @@ const _sfc_main$3 = {
       _push(`<footer${ssrRenderAttrs(mergeProps({
         style: { "background-color": "#d3d3d3" },
         class: "p-4"
-      }, _attrs))} data-v-4b0466ec><div class="w-100" data-v-4b0466ec><div class="row d-flex flex-column flex-md-row justify-content-between m-0" data-v-4b0466ec><div class="col-12 col-md-4" data-v-4b0466ec><div class="row" data-v-4b0466ec><div class="col-12 d-flex d-lg-block align-items-center justify-content-center justify-content-md-start" data-v-4b0466ec>`);
+      }, _attrs))} data-v-2e40def2><div class="w-100" data-v-2e40def2><div class="row d-flex flex-column flex-md-row justify-content-between m-0" data-v-2e40def2><div class="col-12 col-md-4" data-v-2e40def2><div class="row" data-v-2e40def2><div class="col-12 d-flex d-lg-block align-items-center justify-content-center justify-content-md-start" data-v-2e40def2>`);
       _push(ssrRenderComponent(_component_NuxtLink, { to: "/" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<img${ssrRenderAttr("src", `${unref(config).paragonConsts.AWS_IMG_DIR}phlogo_black.webp`)} width="175" alt="Paragon Hydraulics Logo" data-v-4b0466ec${_scopeId}>`);
+            _push2(`<img${ssrRenderAttr("src", `${unref(config).paragonConsts.AWS_IMG_DIR}phlogo_black.webp`)} width="175" alt="Paragon Hydraulics Logo" data-v-2e40def2${_scopeId}>`);
           } else {
             return [
               createVNode("img", {
@@ -1737,9 +1737,9 @@ const _sfc_main$3 = {
         }),
         _: 1
       }, _parent));
-      _push(`<img class="mx-0 mx-md-2"${ssrRenderAttr("src", `${unref(config).paragonConsts.AWS_IMG_DIR}vsralogo_bw.webp`)} width="110" alt="VSRA Logo" data-v-4b0466ec></div></div></div><div class="col-12 col-md-5 col-lg-8 d-flex align-items-center justify-content-center justify-content-md-end p-0 m-0" data-v-4b0466ec><div class="d-flex row footer-text text-uppercase" data-v-4b0466ec><div class="d-flex p-0 justify-content-center justify-content-lg-end" data-v-4b0466ec><span data-v-4b0466ec>Iso 9001-2015 compliant</span></div><div class="d-flex p-0 justify-content-center justify-content-lg-end" data-v-4b0466ec><span data-v-4b0466ec>757-973-3773 | <a class="text-decoration-none" href="https://maps.app.goo.gl/HDFT6u3Lu4PESYWZA" data-v-4b0466ec>711 falcon ave, chesapeake va, 23324</a></span></div><div class="row d-flex flex-column flex-md-row p-0 w-100 m-0" data-v-4b0466ec><div class="d-flex p-0 justify-content-center justify-content-lg-end" data-v-4b0466ec><span class="footer-credit" data-v-4b0466ec>`);
+      _push(`<img class="mx-0 mx-md-2"${ssrRenderAttr("src", `${unref(config).paragonConsts.AWS_IMG_DIR}vsralogo_bw.webp`)} width="110" alt="VSRA Logo" data-v-2e40def2></div></div></div><div class="col-12 col-md-5 col-lg-8 d-flex align-items-center justify-content-center justify-content-md-end p-0 m-0" data-v-2e40def2><div class="d-flex row footer-text text-uppercase" data-v-2e40def2><div class="d-flex p-0 justify-content-center justify-content-lg-end" data-v-2e40def2><span data-v-2e40def2>Iso 9001-2015 compliant</span></div><div class="d-flex p-0 justify-content-center justify-content-lg-end" data-v-2e40def2><span data-v-2e40def2><a class="text-decoration-none" href="tel:757-973-3773" data-v-2e40def2>757-973-3773</a> | <a class="text-decoration-none" href="https://maps.app.goo.gl/HDFT6u3Lu4PESYWZA" data-v-2e40def2>711 falcon ave, chesapeake va, 23324</a></span></div><div class="row d-flex flex-column flex-md-row p-0 w-100 m-0" data-v-2e40def2><div class="d-flex p-0 justify-content-center justify-content-lg-end" data-v-2e40def2><span class="footer-credit" data-v-2e40def2>`);
       _push(ssrRenderComponent(unref(Icon), { icon: "ic:twotone-build-circle" }, null, _parent));
-      _push(`Developed by <a href="https://oceanfrontcreative.com" target="_blank" data-v-4b0466ec>Oceanfront Creative</a></span></div></div></div></div></div></div></footer>`);
+      _push(`Built &amp; Managed by <a href="https://oceanfrontcreative.com/?utm_source=ParagonHydraulics&amp;utm_medium=referral" target="_blank" data-v-2e40def2>Oceanfront Creative</a></span></div></div></div></div></div></div></footer>`);
     };
   }
 };
@@ -1749,7 +1749,7 @@ _sfc_main$3.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Footer.vue");
   return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-const __nuxt_component_2 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-4b0466ec"]]);
+const __nuxt_component_2 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-2e40def2"]]);
 const _sfc_main$2 = {
   __name: "app",
   __ssrInlineRender: true,
