@@ -1,7 +1,7 @@
 <template>
-    <div class="row mx-0">
+    <div class="row">
         <div class="text-center col-12">
-            <span :style="textColor">{{ heading }}</span>
+            <h3 :style="textColor">{{ heading }}</h3>
         </div>
     </div>
 </template>

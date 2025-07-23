@@ -18,7 +18,7 @@ svg {
     background-color: $paragon-blue;
 
     &:nth-last-of-type(2) {
-        background-color: rgba($paragon-blue, 0.75);
+        background-color: rgba($paragon-blue, 0.90);
     }
 }
 
@@ -27,7 +27,7 @@ svg {
     background-color: rgba($paragon-red, 0.65);
     width: 75%;
 
-    @media (max-width:500px) {
+    @media (max-width:800px) {
         margin-top: 0;
         width: 100%;
     }
@@ -68,7 +68,7 @@ svg {
 }
 
 #customers {
-    background-image: url(/norfolknavyship.jpg);
+    background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/norfolknavyship.jpg);
     box-shadow: inset 0 0 0 2000px #051535a6;
 
     img {
@@ -84,7 +84,7 @@ svg {
 }
 
 #harborCrane {
-    background-image: url(/craneship.jpg);
+    background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/craneship.jpg);
 
     @media (max-width:500px) {
         background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/craneship.webp);
@@ -94,8 +94,8 @@ svg {
 }
 
 #techServices {
-    background-image: url(/military-2410323.jpg);
-    box-shadow: inset 0 0 0 2000px #051535a6;
+    background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/military-2410323.jpg);
+    box-shadow: inset 0 0 0 2000px #051535ce;
 
     @media (max-width:500px) {
         background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/militaryship.webp);
@@ -104,11 +104,11 @@ svg {
 }
 
 #meetUs {
-    background-image: url(/meeting.jpg);
+    background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/meeting.jpg);
     background-repeat:no-repeat;
     background-size:cover;
     background-position: center;
-    box-shadow: inset 0 0 0 2000px #051535a6;
+    box-shadow: inset 0 0 0 2000px #051535e1;
 
     @media (max-width:500px) {
         background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/meeting.webp);
@@ -116,10 +116,6 @@ svg {
     }
 }
 
-#team {
-    background-image: url(/norfolk_waterfront.jpg);
-    background-repeat:no-repeat;
-    background-size:cover;
-    background-position: center;
-    box-shadow: inset 0 0 0 2000px rgba($paragon-white, 0.55);
+iframe {
+    border:2px solid $paragon-blue;
 }

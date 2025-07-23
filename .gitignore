@@ -19,6 +19,9 @@ logs
 *.psd
 *.docx
 *.txt
+.png
+.psd
+localassets
 
 # Local env files
 .env

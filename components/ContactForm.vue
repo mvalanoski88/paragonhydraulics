@@ -1,6 +1,6 @@
 <template>
     <div class="row justify-content-center mx-0">
-        <div class="col-8">
+        <div class="col-10 col-lg-12">
             <form id="PHRFQ">
                 <label>Name
                 <input type="text" id="name" name="name" maxlength="35" v-model="name" required></label>
@@ -15,7 +15,7 @@
                     <button type="submit" class="btn text-uppercase" id="submission" value="Submit Form" data-sitekey="6Lcdm5AoAAAAAGa2sDFblYckqe-t2exwT_68_4Mk" data-callback='onSubmit' data-action="submit">Submit Form</button>
                 </div>
                 <div id="result-text">
-                    <p class="disclaimer-text">No personal information collected in this form is stored. The information collected is for communication purposes only.</p>
+                    <p class="disclaimer-text lh-sm">No personal information collected in this form is stored. The information collected is for communication purposes only.</p>
                 </div>
             </form>
         </div>
