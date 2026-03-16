@@ -1,0 +1,47 @@
+@import '../scss/main.scss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+}
+
+p {
+    font-family: "RobotoFlex", sans-serif;
+}
+
+
+h1 {
+    @apply text-6xl lg:text-9xl;
+}
+
+h2 {
+    @apply text-4xl lg:text-7xl;
+}
+
+h3 {
+    @apply text-paragon-white text-4xl lg:text-8xl;
+}
+
+h4 {
+    @apply text-paragon-white text-4xl lg:text-5xl;
+
+}
+
+
+@layer base {
+    :root {
+        --paragon-red: #C80E2D;
+        --paragon-blue: #051535;
+        --paragon-gray: #6F8695;
+        --paragon-white: #ffffff;
+        --paragon-white-faded: rgba(var(--paragon-white), 0.15);
+    }
+}
+
+@layer components {
+    
+}
+
+@layer utilities {
+}
