@@ -45,12 +45,5 @@ export default defineNuxtConfig({
     '@nuxtjs/sitemap',
     '@nuxtjs/tailwindcss'
   ],
-  device: {
-    refreshOnResize: true
-  },
-  nitro: {
-    prerender: {
-      crawlLinks: true
-    }
-  }
+  compatibilityDate: '2025-04-11'
 })
