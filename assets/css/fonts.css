@@ -4,4 +4,12 @@
     font-style: normal;
     src: url('https://dpiilk2o4fzzt.cloudfront.net/other/RobotoFlex.woff') format('woff');
     font-display: swap;
-  }
+}
+
+/* cyrillic-ext */
+@font-face {
+    font-family: 'Bebas';
+    font-style: normal;
+    src: url('https://dpiilk2o4fzzt.cloudfront.net/other/Bebas.woff') format('woff');
+    font-display: swap;
+}

@@ -31,6 +31,9 @@ export default defineNuxtConfig({
     config: {},
     viewer: true,
   },
+  css: [
+    '~/assets/css/fonts.css'
+  ],
   site: {
     url: 'https://paragonhydraulics.com'
   },
