@@ -2,7 +2,6 @@
 @font-face {
     font-family: 'Bebas';
     font-style: normal;
-    font-weight: 400;
-    src: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/other/Bebas.ttf) format('truetype');
+    src: url('https://dpiilk2o4fzzt.cloudfront.net/other/Bebas.woff') format('woff');
     font-display: swap;
   }

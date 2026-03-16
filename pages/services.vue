@@ -1,60 +1,62 @@
 <template>
     <main>
         <PageHero sectionId="services"
-                  pageTitle="Our Services"
-                  pageHeading="Paragon offers an extensive array of shipboard services, emphasizing expertise in hydraulic crane and deck equipment repair, installation, and technical representation" />
+                pageTitle="Our Services"
+                pageHeading="Paragon offers an extensive array of shipboard services, emphasizing expertise in hydraulic crane and deck equipment repair, installation, and technical representation" />
         <section>
             <div class="p-0 m-0">
-                <div class="row m-0 flex-column flex-md-row blue">
-                    <div style="position: relative; min-height: 350px;" class="d-flex col-12 col-md-6 p-0 align-items-center">
-                        <div class="blue m-3 m-lg-5" style="position: relative;  z-index: 2;">
+                <div class="flex flex-col md:flex-row flex-wrap m-0 blue">
+                    <div style="min-height: 350px;" class="relative flex w-full md:w-1/2 p-0 items-center order-2 lg:order-1">
+                        <div class="blue m-3 lg:m-5 relative z-[2]">
                             <p class="small-copy">While based in Virginia, our professional services have a global reach, catering to ports, bases, and shipyards worldwide.</p>
                         </div>
                         <div id="harborCrane" class="image-bg"></div>
                     </div>
-                    <div class="col-12 col-md-6 align-self-center p-4 p-lg-5">
-                        <p>Paragon Hydraulics recognized a significant gap in technical oversight for shipboard cargo and boat handling equipment, leading to substantial inefficiencies and associated costs for the US Navy.</p>
-                        <p>Our services extend to the installation and maintenance of crane, hull, deck and cargo handling equipment. We provide OEM technical representation for crane equipment and comprehensive solutions for the installation and repair of various shipboard mechanical systems.</p>
-                        <p>With increasing threat of global conflict, the United States Navy must stay capable and ready to defend. Paragon Hydraulics assists in completing that mission the right way.</p>
+                    <div class="w-full md:w-1/2 self-center p-4 lg:p-5 order-1 lg:order-2">
+                        <p class="text-xl lg:text-3xl my-4 lg:my-6">Paragon Hydraulics recognized a significant gap in technical oversight for shipboard cargo and boat handling equipment, leading to substantial inefficiencies and associated costs for the US Navy.</p>
+                        <p class="text-xl lg:text-3xl my-4 lg:my-6">Our services extend to the installation and maintenance of cranes, cargo handling equipment, deck and huwe provide OEM Technical Representation for crane equipment and comprehensive solutions for the installation and repair of various shipboard mechanical systems.</p>
+                        <p class="text-xl lg:text-3xl my-4 lg:my-6">With increasing threat of global conflict, the United States Navy must stay capable and ready to defend. Paragon Hydraulics assists in completing that mission the right way.</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="techServices" class="justify-content-center">
-            <div class="p-4 p-md-5">
-                <div class="row">
-                    <div class="col-12 d-flex flex-column align-items-center">
+        <section id="techServices" class="flex justify-center">
+            <div class="p-4 md:p-5">
+                <div class="flex flex-wrap">
+                    <div class="w-full flex flex-col items-center">
                         <SectionHeader heading="General technical services" :style="'light'" />
-                        <div class="row w-lg-75 p-3 mt-3 mt-lg-5 justify-content-lg-center">
-                            <div class="col-12">
-                                <ul class="services-provided">
-                                    <li v-for="name in servicesProvided">
-                                        {{ name.name }}
-                                    </li>
-                                </ul>
+                        <div class="flex flex-wrap lg:w-3/4 p-3 mt-3 lg:mt-5 lg:justify-center">
+                            <ul class="flex-1 lg:flex lg:flex-wrap services-provided">
+                                <li v-for="service in servicesProvided" class="flex lg:items-start lg:w-1/2 mb-2 lg:mb-4 items-center text-base lg:text-3xl">
+                                    <Icon icon="iconamoon:shield-yes-bold" class="basis-[10%] w-auto text-base lg:text-2xl"/>
+                                    <span class="basis-[90%]">{{ service.name }}</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap p-1 lg:p-3 red">
+                            <div class="p-0 w-full">
+                                <div class="flex flex-wrap mt-3">
+                                    <h4 class="text-center w-full">who we provide services to</h4>
+                                </div>
+                                <div class="flex flex-wrap mt-4">
+                                    <ul class="flex-1 lg:flex lg:flex-wrap clients text-center">
+                                        <li v-for="name in serviceClients" class="lg:w-1/4 py-3 text-xl">
+                                            {{ name.name }}
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <div class="row p-1 p-lg-3 red">
-                        <div class="p-0 col-12">
-                            <div class="row mt-3">
-                                <h4 class="text-center">who we provide services to</h4>
-                            </div>
-                            <div class="row mt-4">
-                                <ul class="clients text-center">
-                                    <li v-for="name in serviceClients">
-                                        {{ name.name }}
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 </template>
+
 <script setup>
+import { Icon } from '@iconify/vue';
+
 const serviceClients = [
                 {name : "United States Navy"},
                 {name : "Military Sealift Command"},
@@ -64,7 +66,7 @@ const serviceClients = [
                 {name : "United States Coast Guard"},
                 {name : "SWARMC"},
                 {name : "Ship Repair Contractor/Vendors"},
-            ]
+]
 const servicesProvided = [
                 {name : "Hydraulic crane and davit repair, removal, installation, and technical representative services"},
                 {name : "Hydraulic crane preventative maintenance"},
@@ -80,30 +82,26 @@ const servicesProvided = [
                 {name : "009-90 support"},
                 {name : "Operations support"},
                 {name : "Remote technical support"},
-                {name : "GFM storage"},
+                {name : "GFM Storage"},
                 {name : "Hull and deck machinery"},
-            ]
+]
+
+const config = useRuntimeConfig();
+const route = useRoute();
+
+useHead({
+    link: [{rel: 'canonical', href: `${config.public.siteUrl}${route.path}`,},],
+}),
+
+useSeoMeta({
+  title: 'Paragon Hydraulics | Services',
+  ogTitle: 'Paragon Hydraulics | Services',
+  description: 'Paragon offers an extensive array of shipboard services, emphasizing expertise in hydraulic crane and deck equipment repair, installation, and technical representation.',
+  ogDescription: 'Paragon offers an extensive array of shipboard services, emphasizing expertise in hydraulic crane and deck equipment repair, installation, and technical representation.',
+})
+
 
 </script>
-<style lang="scss" scoped>
-ul {
-    columns:2;
-    padding: 0;
+<style>
 
-    @media (max-width:500px) {
-        columns:1
-    }
-
-    li {
-        margin: 0;
-    }
-    ul.clients li::marker {
-        content: '' !important;
-    }
-
-    &.services-provided {
-        list-style: inside;
-        grid-column-gap: 100px;
-    }
-}
 </style>

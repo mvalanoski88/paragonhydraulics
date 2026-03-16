@@ -2,6 +2,6 @@
 @font-face {
     font-family: 'Roboto Flex';
     font-style: normal;
-    font-weight: 400;
-    src: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/other/RobotoFlex.ttf) format('truetype');
+    src: url('https://dpiilk2o4fzzt.cloudfront.net/other/RobotoFlex.woff') format('woff');
+    font-display: swap;
   }

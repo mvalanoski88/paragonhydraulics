@@ -4,6 +4,7 @@
 .nitro
 .cache
 dist
+.output
 
 # Node dependencies
 node_modules
@@ -22,6 +23,7 @@ logs
 .png
 .psd
 localassets
+public/{*.jpg, *.png}
 
 # Local env files
 .env
