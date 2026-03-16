@@ -15,15 +15,28 @@ export default defineNuxtConfig({
     },
     pageTransition: { name: 'page', mode: 'out-in' },
   },
+  runtimeConfig: {
+    public: {
+      awsUrl: '',
+      emailApiBase: '',
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://paragonhydraulics.com'
+    }
+  },
+  tailwindcss: {
+    cssPath: ['~/assets/css/tailwind.css', { injectPosition: "first" }],
+    configPath: 'tailwind.config',
+    exposeConfig: {
+      level: 2
+    },
+    config: {},
+    viewer: true,
+  },
+  css: [
+    '~/assets/css/fonts.css'
+  ],
   site: {
     url: 'https://paragonhydraulics.com'
   },
-  css: [
-    "~/node_modules/bootstrap/dist/css/bootstrap.min.css",
-    "~/assets/scss/main.scss",
-    "~/assets/css/bebas.css",
-    "~/assets/css/robotoflex.css"
-  ],
   imports: {
     dirs: [
       'composables'
@@ -32,9 +45,8 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/critters',
     '@nuxtjs/device',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/tailwindcss'
   ],
-  device: {
-    refreshOnResize: true
-  }
+  compatibilityDate: '2025-04-11'
 })

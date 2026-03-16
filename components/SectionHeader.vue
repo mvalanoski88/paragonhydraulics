@@ -1,8 +1,6 @@
 <template>
-    <div class="row">
-        <div class="text-center col-12">
-            <h3 :style="textColor">{{ heading }}</h3>
-        </div>
+    <div class="flex flex-wrap justify-center">
+        <h3 :style="textColor">{{ heading }}</h3>
     </div>
 </template>
 <script>
@@ -27,16 +25,5 @@ export default {
     }
 }
 </script>
-<style lang="scss" scoped>
-@import '~/assets/scss/variables.scss';
-
-span {
-    @include size-height(7rem, 5rem);
-    color: $paragon-white;
-
-    @media (max-width:1000px) {
-        @include size-height(3rem, 4.15rem);
-
-    }
-}
+<style>
 </style>
