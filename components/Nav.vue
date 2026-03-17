@@ -1,41 +1,92 @@
 <template>
-    <header>
-        <div @click="toggleMenuClose" :class="{'mobile-overlay' : mobileNav}"></div>
-        <nav class="w-100" :class="{ 'scrolled-nav' : scrollPosition, 'scrolled-nav-open' : mobileNav }">
-            <div class="row align-items-center justify-content-md-between">
-                <div class="col-6 col-md-4">
-                    <NuxtLink :class="{'d-none' : mobileNav}" to="/">
-                        <img id="mainLogo" width="290" height="130" :src="`${config.paragonConsts.AWS_IMG_DIR}phlogo.webp`" alt="Paragon Hydraulics Logo"/>
-                    </NuxtLink>
-                </div>
-                <div v-if="!mobile" class="desktop d-flex col-6 col-md-8 p-0 justify-content-end">
-                    <ul class="p-0 pl-md-4 d-inline-flex">
-                        <li class="mb-4 mb-md-0" v-for="link in navlinks">
-                            <NuxtLink :to="link.link">{{ link.name }}</NuxtLink>
-                        </li>
-                    </ul>
-                </div>
-                <div v-if="mobile" class="col-6 d-flex justify-content-end">
-                    <Icon @click="toggleMenuOpen" :class="{ 'mobile-icon' : mobileNav }" icon="ri:menu-3-fill" />
-                </div>
-                <transition name="mobile-nav">
-                    <ul class="p-0 pl-md-4 dropdown-nav" v-if="mobileNav">
-                        <li class="mb-4 mb-lg-0" v-for="link in navlinks">
-                            <NuxtLink @click="toggleMenuClose" :to="link.link">{{ link.name }}</NuxtLink>
-                        </li>
-                        <li v-if="$route.name != 'contactus'" data-v-1c703980="" class="mobile-menu-cta d-flex d-lg-none align-self-center mb-4 mb-md-0">
-                            <a href="tel:757-937-3773">
-                                <Icon icon="tabler:phone-call" />
-                            </a>
-                            <a href="mailto:rfq@paragonhydraulics.com?subject=RFQ Request">
-                                <Icon icon="mdi:email-edit-outline" />
-                            </a>
-                        </li>
-                    </ul>
-                </transition>
-            </div>
-        </nav>
-    </header>
+  <header>
+    <div
+      @click="toggleMenuClose"
+      :class="{ 'mobile-overlay': mobileNav }"
+    ></div>
+
+    <nav
+      class="w-full p-3 lg:px-5"
+      :class="{ 'scrolled-nav': scrollPosition, 'scrolled-nav-open': mobileNav }"
+    >
+      <div class="flex flex-wrap items-center md:justify-between">
+
+        <!-- Logo -->
+        <div class="w-1/2 md:w-1/3">
+          <NuxtLink :class="{ hidden: mobileNav }" to="/">
+            <img
+              id="mainLogo"
+              width="290"
+              height="130"
+              :src="`${config.paragonConsts.AWS_IMG_DIR}phlogo.webp`"
+              alt="Paragon Hydraulics Logo"
+            />
+          </NuxtLink>
+        </div>
+
+        <!-- Desktop Nav -->
+        <div
+          v-if="!mobile"
+          class="desktop flex w-1/2 md:w-2/3 p-0 justify-end"
+        >
+          <ul class="inline-flex">
+            <li
+              class="mb-4 md:mb-0 mx-3 navigation-link"
+              v-for="link in navlinks"
+              :key="link.link"
+            >
+              <NuxtLink :to="link.link">{{ link.name }}</NuxtLink>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile Menu Icon -->
+        <div
+          v-if="mobile"
+          class="w-1/2 flex justify-end"
+        >
+          <Icon
+            @click="toggleMenuOpen"
+            :class="{ 'mobile-icon': mobileNav }"
+            icon="ri:menu-3-fill"
+          />
+        </div>
+
+        <!-- Mobile Menu -->
+        <transition name="mobile-nav">
+          <ul
+            class="p-0 md:pl-4 dropdown-nav"
+            v-if="mobileNav"
+          >
+            <li
+              class="mb-4 lg:mb-0"
+              v-for="link in navlinks"
+              :key="link.link"
+            >
+              <NuxtLink @click="toggleMenuClose" :to="link.link">
+                {{ link.name }}
+              </NuxtLink>
+            </li>
+
+            <li
+              v-if="$route.name != 'contactus'"
+              class="mobile-menu-cta flex lg:hidden self-center mb-4 md:mb-0"
+            >
+              <a href="tel:757-937-3773">
+                <Icon icon="tabler:phone-call" />
+              </a>
+
+              <a href="mailto:rfq@paragonhydraulics.com?subject=RFQ Request">
+                <Icon icon="mdi:email-edit-outline" />
+              </a>
+            </li>
+
+          </ul>
+        </transition>
+
+      </div>
+    </nav>
+  </header>
 </template>
 <script setup>
 import { ref, onMounted } from 'vue';
@@ -162,17 +213,6 @@ nav{
 .scrolled-nav-open {
     background-color: transparent;
     box-shadow: none;
-}
-
-.nav-menu {
-    @media (max-width:1000px) {
-        align-items: center;
-
-    }
-
-    & div {
-        padding: 0
-    }
 }
 
 svg {

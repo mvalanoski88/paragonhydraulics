@@ -1,89 +1,153 @@
 <template>
-    <div class="row justify-content-center mx-0">
-        <div class="col-10 col-lg-12">
-            <form id="PHRFQ">
-                <label>Name
-                <input type="text" id="name" name="name" maxlength="35" v-model="name" required></label>
-                <label>Email
-                <input type="email" id="email" name="email" v-model="email" required></label>
-                <label>Phone Number
-                <input type="tel" id="phone" name="phone" minlength="10" placeholder="###-###-####" v-model="phone" required></label>
-                <label>Company
-                <input type="text" id="company" name="company" v-model="company" required></label>
-                <StateDropdown @selected-state="handleSelectedState"/>
-                <div class="my-4" style="text-align: center;">
-                    <button type="submit" class="btn text-uppercase" id="submission" value="Submit Form" data-sitekey="6Lcdm5AoAAAAAGa2sDFblYckqe-t2exwT_68_4Mk" data-callback='onSubmit' data-action="submit">Submit Form</button>
-                </div>
-                <div id="result-text">
-                    <p class="disclaimer-text lh-sm">No personal information collected in this form is stored. The information collected is for communication purposes only.</p>
-                </div>
-            </form>
-        </div>
+    <div class="flex justify-center mx-0">
+        <form id="PHRFQ" @submit.prevent="emailSubmission" class="px-4 lg:px-0">
+            <div class="flex flex-col">
+                <label>Name<span class="px-2 text-paragon-red">*</span></label>
+                <input type="text" id="name" name="name" maxlength="35" v-model="name" required>
+            </div>
+            <div class="flex flex-col">
+                <label>Email<span class="px-2 text-paragon-red">*</span></label>
+                <input type="email" id="email" name="email" v-model="email" required>
+            </div>
+            <div class="flex flex-col">
+                <label class="block">Phone Number<span v-if="phoneRequired" class="px-2 text-paragon-red">*</span></label>
+                <input id="phone" class="block w-full"
+                    placeholder="(###) ###-####"
+                    type="tel"
+                    inputmode="numeric"
+                    maxlength="14"
+                    :required="phoneRequired"
+                    :value="formattedPhone"
+                    @input="handleInput"
+                />
+            </div>
+                
+            <div class="flex flex-col">
+                <label>Company</label>
+                <input type="text" id="company" name="company" v-model="company">
+            </div>
+            <div class="w-full">
+                <StateDropdown @stateSelection="getState"/>
+            </div>
+            <input type="text" name="beepboop" v-model="beepboop" autocomplete="off" tabindex="-1" class="hidden"/>
+            <div class="my-4 text-center">
+                <button type="submit" class="btn uppercase px-8 py-2" id="rfQSubmission" value="Submit Form"
+                    data-sitekey="6Lcdm5AoAAAAAGa2sDFblYckqe-t2exwT_68_4Mk"
+                    data-action="submit">Submit Form
+                </button>
+            </div>
+            <div id="result-text">
+                <p class="disclaimer-text lh-sm">No personal information collected in this form is stored. The information collected is for communication purposes only.</p>
+            </div>
+        </form>
     </div>
 </template>
     
 <script setup>
-import {InputFormatter} from '@levidavidmurray/input-formatter';
 import {ref} from 'vue';
 
+const name = ref(null);
+const email = ref(null);
+const company = ref(null);
+const beepboop = ref(null);
+const phone = ref('');
 const selectedState = ref('');
 
-function onSubmit(token) {
-            document.getElementById("PHRFQ").submit();
-        }
-function handleSelectedState(state) {
-    selectedState.value = state;
+const phoneRequired = computed(() => {
+    return !!phone.value
+})
+
+const formattedPhone = computed(() => {
+    const digits = phone.value
+
+    const part1 = digits.slice(0, 3)
+    const part2 = digits.slice(3, 6)
+    const part3 = digits.slice(6, 10)
+
+    if (digits.length <= 3) return part1
+    if (digits.length <= 6) return `(${part1}) ${part2}`
+    return `(${part1}) ${part2}-${part3}`
+  })
+
+const getState = (state) => {
+    selectedState.value = state
 }
 
-onMounted(() => {
+function handleInput(e) {
+  phone.value = e.target.value
+    .replace(/\D/g, '')   // remove junk
+    .slice(0, 10)
+}
 
-    const formatter = InputFormatter({
-    formats: {
-        10: '(xxx) xxx-xxxx'
-    },
-    replaceChar: 'x',
-    skipFormatOpts: [{length: 10, position: 1, skip: false}],
+const submitEmail = async (api, emailBody) => {
+  try {
+    const response = await fetch(api, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: emailBody,
     });
-    formatter.on('#phone');
 
-    //Email Submission
-    const form = document.getElementById("PHRFQ");
-    form.addEventListener("submit", (event) => {
+    const contentType = response.headers.get("content-type");
+    let data = null;
+
+    if (contentType?.includes("application/json")) {
+      data = await response.json();
+    } else {
+      data = await response.text();
+    }
+
+    const isError = response.status >= 400;
+
+    return {
+      status: response.status,
+      data,
+      error: isError ? `API error or unexpected response format.` : null,
+    };
+  }
+  catch (error) {
+    return {
+      status: null,
+      data: null,
+      error: `An error occurred during the request: ${error.message || error}`,
+    };
+  }
+};
+
+const emailSubmission = async (event) => {
     event.preventDefault();
 
-    const { name, email, phone, company } = event.target;
+    if (beepboop.value) return;
 
-    const endpoint = "https://t7hi1xq663.execute-api.us-east-1.amazonaws.com/default/paragonhydraulics-emailsend";
-    
+    const runtimeConfig = useRuntimeConfig();
+    const endpoint = runtimeConfig.public.emailApiBase;
     const body = JSON.stringify({
         senderName: name.value,
         senderEmail: email.value,
         senderPhone: phone.value,
         senderCompany: company.value,
-        senderState: state.value
+        senderState: selectedState.value
     });
-        
-    const requestOptions = {
-        method: "POST",
-        body
-    };
 
-    fetch(endpoint, requestOptions)
-        .then((response) => {
-            if (response.ok || !response.ok) {
-                document.getElementById("result-text").innerHTML =
-                '<p style="font-size: 1rem; margin-bottom: 0; text-align: center; line-height: 1.5rem;">Thank you for your request. A representative will be in contact with you.</p>';
-                document.getElementById('submission').disabled="true";
-                console.log(body)
-            }
-        })
-        .catch((error) => {
-            console.log('no working', error)
-        })
-    });
-    //End Email Submission
+    try {
+    const result = await submitEmail(endpoint, body);
 
-})
+    if (result.error) {
+        alert("A network error occurred. Please try again later.");
+        console.warn(result.error)
+        await navigateTo('/')
+    } else {
+        await navigateTo('/email-success')
+    }
+    } catch (error) {
+        alert("Something went wrong. Please try again later.");
+        console.error("Unexpected error during email submission:", error);
+        await nextTick()
+        alert("A network error occurred. Please try again later.");
+        await navigateTo('/')
+    }
+};
 
 </script>
 
@@ -100,6 +164,7 @@ select, input {
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
+    margin-bottom: 1rem;
 }
 
 input::placeholder {
@@ -107,8 +172,6 @@ input::placeholder {
 }
 
 label {
-    display: flex;
-    flex-direction: column;
     font-size: 1.05rem;
     font-weight: 700;
     color: #051535;

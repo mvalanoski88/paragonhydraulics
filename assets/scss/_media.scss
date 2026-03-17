@@ -1,8 +1,8 @@
 #mainLogo {
-    width: 14.5rem;
+    width: 15.5rem;
     height: 100%;
     min-width: 150px;
-    max-width: 200px;
+    max-width: 350px;
 }
 
 img {
@@ -47,10 +47,10 @@ svg {
 }
 
 #homeCrane {
-    background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/crane-473712_1280.jpg);
+    background-image: url("https://dpiilk2o4fzzt.cloudfront.net/img/crane-473712_1280.jpg");
 
     @media (max-width:500px) {
-        background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/craneextend.webp);
+        background-image: url("https://dpiilk2o4fzzt.cloudfront.net/img/craneextend.webp");
 
     }
 }
@@ -58,60 +58,55 @@ svg {
 #americanFlag {
     opacity: 0.15;
     z-index: 1;
-    background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/americanflag.jpg);
+    background-image: url("https://dpiilk2o4fzzt.cloudfront.net/img/americanflag.jpg");
 
     @media (max-width:500px) {
-        background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/americanflag.webp);
+        background-image: url("https://dpiilk2o4fzzt.cloudfront.net/img/americanflag.webp");
 
     }
 
 }
 
 #customers {
-    background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/norfolknavyship.jpg);
+    background-image: url("https://dpiilk2o4fzzt.cloudfront.net/img/norfolknavyship.jpg");
     box-shadow: inset 0 0 0 2000px #051535a6;
 
-    img {
-        padding: 1rem;
-        max-width: 100%;
-    }
-
     @media (max-width:500px) {
-        background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/norfolknavyship.webp);
+        background-image: url("https://dpiilk2o4fzzt.cloudfront.net/img/norfolknavyship.webp");
         background-position: top;
 
     }
 }
 
 #harborCrane {
-    background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/craneship.jpg);
+    background-image: url("https://dpiilk2o4fzzt.cloudfront.net/img/craneship.jpg");
 
     @media (max-width:500px) {
-        background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/craneship.webp);
+        background-image: url("https://dpiilk2o4fzzt.cloudfront.net/img/craneship.webp");
 
     }
 
 }
 
 #techServices {
-    background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/military-2410323.jpg);
+    background-image: url("https://dpiilk2o4fzzt.cloudfront.net/img/military-2410323.jpg");
     box-shadow: inset 0 0 0 2000px #051535ce;
 
     @media (max-width:500px) {
-        background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/militaryship.webp);
+        background-image: url("https://dpiilk2o4fzzt.cloudfront.net/img/militaryship.webp");
 
     }
 }
 
 #meetUs {
-    background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/meeting.jpg);
+    background-image: url("https://dpiilk2o4fzzt.cloudfront.net/img/meeting.jpg");
     background-repeat:no-repeat;
     background-size:cover;
     background-position: center;
     box-shadow: inset 0 0 0 2000px #051535e1;
 
     @media (max-width:500px) {
-        background-image: url(https://s3.amazonaws.com/assets.paragonhydraulics.com/img/meeting.webp);
+        background-image: url("https://dpiilk2o4fzzt.cloudfront.net/img/meeting.webp");
         background-position: left;
     }
 }
