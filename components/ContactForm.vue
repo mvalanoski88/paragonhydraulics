@@ -53,7 +53,6 @@ const beepboop = ref(null);
 const phone = ref('');
 const selectedState = ref('');
 const runtimeConfig = useRuntimeConfig();
-const dateCheck = Date.now();
 
 const phoneRequired = computed(() => {
     return !!phone.value
@@ -120,10 +119,7 @@ const submitEmail = async (api, emailBody) => {
 const emailSubmission = async (event) => {
     event.preventDefault();
 
-    const now = Date.now();
-
     if (beepboop.value) return;
-    if (now - dateCheck < 1000) return;
 
     const endpoint = runtimeConfig.public.emailApiBase;
     const body = JSON.stringify({
