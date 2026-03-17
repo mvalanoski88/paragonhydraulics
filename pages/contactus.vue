@@ -2,55 +2,51 @@
     <main>
         <section id="contactus">
             <div class="container mt-5 lg:mt-0">
-                <div class="flex flex-col lg:flex-row items-center md:content-start flex-wrap">
-                    <div class="w-full lg:w-5/12 text-center lg:text-left">
+                <div class="flex flex-col lg:flex-row items-start lg:items-center content-start flex-wrap">
+                    <div class="basis-full lg:basis-2/5 text-center lg:text-left">
                         <h1>CONTACT US</h1>
                     </div>
-                    <div class="w-full lg:w-7/12 p-0">
-                        <div class="flex flex-wrap">
+                    <div class="basis-full lg:basis-3/5 flex flex-col gap-4 p-0">
+                        <div class="flex flex-wrap items-center">
                             <div class="w-1/12 flex items-center">
                                 <p class="uppercase text-left">
                                     <Icon icon="zondicons:location" />
                                 </p>
                             </div>
                             <div class="w-11/12 flex items-center">
-                                <p class="uppercase text-left leading-snug">711 falcon ave | chesapeake va, 23324</p>
+                                <p class="text-2xl lg:text-4xl mb-2 lg:mb-4 uppercase text-left leading-snug">711 falcon ave | chesapeake va, 23324</p>
                             </div>
                         </div>
-                        <div class="flex flex-wrap">
+                        <div class="flex flex-wrap items-center">
                             <div class="w-1/12 flex items-center">
                                 <p class="uppercase">
                                     <Icon icon="tabler:mail-up" />
                                 </p>
                             </div>
                             <div class="w-11/12 flex items-center">
-                                <p class="uppercase">
-                                    <a href="mailto:rfq@paragonhydraulics.com?subject=RFQ Request">rfq@paragonhydraulics.com</a>
-                                </p>
+                                <a class="text-2xl lg:text-4xl mb-2 lg:mb-4 uppercase text-left leading-snug" href="mailto:rfq@paragonhydraulics.com?subject=RFQ Request">rfq@paragonhydraulics.com</a>
                             </div>
                         </div>
-                        <div v-if="isDesktopOrTablet" class="flex flex-wrap">
+                        <div v-if="isDesktopOrTablet" class="flex flex-wrap items-center">
                             <div class="w-1/12 flex items-center">
                                 <p class="uppercase">
                                     <Icon icon="ion:call-sharp" />
                                 </p>
                             </div>
                             <div class="w-11/12 flex items-center">
-                                <p class="uppercase">
+                                <p class="text-2xl lg:text-4xl mb-2 lg:mb-4 uppercase text-left leading-snug">
                                     757-937-3773
                                 </p>
                             </div>
                         </div>
-                        <div v-else class="flex flex-wrap">
+                        <div v-else class="flex flex-wrap items-center">
                             <div class="w-1/12 flex items-center">
                                 <p class="uppercase">
                                     <Icon icon="tabler:phone-call" />
                                 </p>
                             </div>
                             <div class="w-11/12 flex items-center">
-                                <p class="uppercase">
-                                    <a id="mobilePhone" href="tel:757-937-3773">757-937-3773</a>
-                                </p>
+                                <a class="text-2xl lg:text-4xl mb-2 lg:mb-4 uppercase text-left leading-snug" id="mobilePhone" href="tel:757-937-3773">757-937-3773</a>
                             </div>
                         </div>
                     </div>

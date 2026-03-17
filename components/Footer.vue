@@ -57,7 +57,7 @@
               <div class="flex p-0 items-center justify-center lg:justify-end w-full">
                 <Icon class="text-2xl" icon="ic:twotone-build-circle" />
                 <span>Built & Managed by&nbsp;</span>
-                <a
+                <a class="underline"
                   href="https://oceanfrontcreative.com/?utm_source=ParagonHydraulics&utm_medium=referral"
                   target="_blank"
                 >
