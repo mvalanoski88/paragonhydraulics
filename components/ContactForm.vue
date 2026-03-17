@@ -52,8 +52,6 @@ const company = ref(null);
 const beepboop = ref(null);
 const phone = ref('');
 const selectedState = ref('');
-const runtimeConfig = useRuntimeConfig();
-const dateCheck = Date.now();
 
 const phoneRequired = computed(() => {
     return !!phone.value
@@ -82,12 +80,6 @@ function handleInput(e) {
 }
 
 const submitEmail = async (api, emailBody) => {
-  if (beepboop.value) {
-    return;
-  }
-  else if (Date.now() - dateCheck < 1000) {
-    return;
-  }
   try {
     const response = await fetch(api, {
       method: 'POST',
@@ -106,7 +98,7 @@ const submitEmail = async (api, emailBody) => {
       data = await response.text();
     }
 
-    const isError = response.status >= 400 || typeof data === 'string';
+    const isError = response.status >= 400;
 
     return {
       status: response.status,
@@ -126,6 +118,9 @@ const submitEmail = async (api, emailBody) => {
 const emailSubmission = async (event) => {
     event.preventDefault();
 
+    if (beepboop.value) return;
+
+    const runtimeConfig = useRuntimeConfig();
     const endpoint = runtimeConfig.public.emailApiBase;
     const body = JSON.stringify({
         senderName: name.value,
@@ -138,8 +133,9 @@ const emailSubmission = async (event) => {
     try {
     const result = await submitEmail(endpoint, body);
 
-    if (result.status >= 400 || result.error) {
+    if (result.error) {
         alert("A network error occurred. Please try again later.");
+        console.warn(result.error)
         await navigateTo('/')
     } else {
         await navigateTo('/email-success')
