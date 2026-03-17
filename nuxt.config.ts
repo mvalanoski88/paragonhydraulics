@@ -17,8 +17,8 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      awsUrl: '',
-      emailApiBase: '',
+      awsUrl: process.env.NUXT_PUBLIC_AWS_URL,
+      emailApiBase: process.env.NUXT_PUBLIC_EMAIL_API_BASE,
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://paragonhydraulics.com'
     }
   },
