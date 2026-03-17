@@ -7,8 +7,8 @@
             <div class="p-0 m-0">
                 <div class="flex flex-col md:flex-row flex-wrap m-0 blue">
                     <div style="min-height: 350px;" class="relative flex w-full md:w-1/2 p-0 items-center order-2 lg:order-1">
-                        <div class="blue m-3 lg:m-5 relative z-[2]">
-                            <p class="small-copy">While based in Virginia, our professional services have a global reach, catering to ports, bases, and shipyards worldwide.</p>
+                        <div class="blue m-3 lg:m-12 relative z-[2]">
+                            <p class="text-base lg:text-lg p-8 text-center italic">While based in Virginia, our professional services have a global reach, catering to ports, bases, and shipyards worldwide.</p>
                         </div>
                         <div id="harborCrane" class="image-bg"></div>
                     </div>
@@ -36,7 +36,7 @@
                         <div class="flex flex-wrap p-1 lg:p-3 red">
                             <div class="p-0 w-full">
                                 <div class="flex flex-wrap mt-3">
-                                    <h4 class="text-center w-full">who we provide services to</h4>
+                                    <h4 class="text-center w-full underline">who we provide services to</h4>
                                 </div>
                                 <div class="flex flex-wrap mt-4">
                                     <ul class="flex-1 lg:flex lg:flex-wrap clients text-center">

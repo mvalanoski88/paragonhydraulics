@@ -6,7 +6,7 @@
     ></div>
 
     <nav
-      class="w-full"
+      class="w-full p-3 lg:px-5"
       :class="{ 'scrolled-nav': scrollPosition, 'scrolled-nav-open': mobileNav }"
     >
       <div class="flex flex-wrap items-center md:justify-between">
@@ -29,7 +29,7 @@
           v-if="!mobile"
           class="desktop flex w-1/2 md:w-2/3 p-0 justify-end"
         >
-          <ul class="p-0 md:pl-4 inline-flex">
+          <ul class="inline-flex">
             <li
               class="mb-4 md:mb-0 mx-3 navigation-link"
               v-for="link in navlinks"
