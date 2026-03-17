@@ -82,12 +82,6 @@ function handleInput(e) {
 }
 
 const submitEmail = async (api, emailBody) => {
-  if (beepboop.value) {
-    return;
-  }
-  else if (Date.now() - dateCheck < 1000) {
-    return;
-  }
   try {
     const response = await fetch(api, {
       method: 'POST',
@@ -126,6 +120,11 @@ const submitEmail = async (api, emailBody) => {
 const emailSubmission = async (event) => {
     event.preventDefault();
 
+    const now = Date.now();
+
+    if (beepboop.value) return;
+    if (now - dateCheck < 1000) return;
+
     const endpoint = runtimeConfig.public.emailApiBase;
     const body = JSON.stringify({
         senderName: name.value,
@@ -140,6 +139,7 @@ const emailSubmission = async (event) => {
 
     if (result.status >= 400 || result.error) {
         alert("A network error occurred. Please try again later.");
+        console.warn(result.error)
         await navigateTo('/')
     } else {
         await navigateTo('/email-success')
