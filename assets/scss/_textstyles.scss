@@ -1,14 +1,16 @@
+@use '~/assets/scss/variables.scss';
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: $font-family-heading;
+    font-family: variables.$font-family-heading;
     text-wrap: balance;
     word-wrap: break-word;
     font-weight: 400;
 }
 
 a, input {
-    font-family: $font-family;
-    color: $paragon-white;
-    @include size-height(1.15rem, 2rem);
+    font-family: variables.$font-family;
+    color: variables.$paragon-white;
+    @include variables.size-height(1.15rem, 2rem);
 
     @media (max-width:1000px) {
         text-wrap: balance;
@@ -16,47 +18,47 @@ a, input {
 }
 
 p {
-    font-family: $font-family;
-    color: $paragon-white;
+    font-family: variables.$font-family;
+    color: variables.$paragon-white;
     @apply text-center lg:text-start;
 }
 
 .disclaimer-text {
-    @include size-height(0.75rem, 1.25rem);
+    @include variables.size-height(0.75rem, 1.25rem);
     font-style: italic;
     text-align: center;
     padding: 0.25rem;
 }
 
 h1 {
-    color: $paragon-red;
+    color: variables.$paragon-red;
     -webkit-text-stroke-width: 1px; 
-    -webkit-text-stroke-color: $paragon-blue;
+    -webkit-text-stroke-color: variables.$paragon-blue;
 }
 
 .home-hero-text {
     @extend h1;
     @apply text-5xl lg:text-8xl;
-    color: $paragon-blue;
+    color: variables.$paragon-blue;
     -webkit-text-stroke-width: 0;
 }
 
 h2 {
-    color: $paragon-blue;
+    color: variables.$paragon-blue;
 }
 
 
 h3 {
-    color: $paragon-white;
+    color: variables.$paragon-white;
 }
 
 h4 {
-    color: $paragon-white;
+    color: variables.$paragon-white;
 }
 
 h6 {
-    color: $paragon-blue;
-    font-size: $font-size-copy-small;
+    color: variables.$paragon-blue;
+    font-size: variables.$font-size-copy-small;
 }
 
 nav {
@@ -66,14 +68,14 @@ nav {
 #techServices {
     li  {
         list-style-type: none;
-        color: $paragon-white;
+        color: variables.$paragon-white;
 
         @media (max-width:1000px) {
-            border-bottom: 1px solid $paragon-white-faded;
+            border-bottom: 1px solid variables.$paragon-white-faded;
         }
 
         svg {
-            color: $paragon-white;
+            color: variables.$paragon-white;
         }
     }
 
@@ -87,18 +89,18 @@ nav {
 
     p, a {
         list-style-type: none;
-        color: $paragon-blue;
-        font-family: $font-family-heading;
+        color: variables.$paragon-blue;
+        font-family: variables.$font-family-heading;
     }
 
     a {
         text-decoration: none;
-        box-shadow: inset 0 0 0 0 $paragon-blue;
+        box-shadow: inset 0 0 0 0 variables.$paragon-blue;
         transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 
         &:hover {
-            box-shadow: inset 60rem 0 0 0 $paragon-blue;
-            color: $paragon-white;
+            box-shadow: inset 60rem 0 0 0 variables.$paragon-blue;
+            color: variables.$paragon-white;
         }
     }
 }
@@ -107,18 +109,18 @@ li {
     list-style-type: none;
 
     a {
-        font-family: $font-family-heading;
-        color: $paragon-blue;
-        @include size-height(2.5rem, 3rem);
+        font-family: variables.$font-family-heading;
+        color: variables.$paragon-blue;
+        @include variables.size-height(2.5rem, 3rem);
         text-decoration: none;
-        box-shadow: inset 0 0 0 0 $paragon-blue;
+        box-shadow: inset 0 0 0 0 variables.$paragon-blue;
         margin: 0 -.25rem;
         padding: 0 .55rem;
         transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 
         &:hover {
-            box-shadow: inset 160px 0 0 0 $paragon-blue;
-            color: $paragon-white;
+            box-shadow: inset 160px 0 0 0 variables.$paragon-blue;
+            color: variables.$paragon-white;
         }
     }
 }
@@ -126,13 +128,13 @@ li {
 div.footer-text {
 
     span, a {
-        font-family: $font-family-heading;
-        color: $paragon-blue;
-        @include size-height(1.45rem, 1.85rem);
+        font-family: variables.$font-family-heading;
+        color: variables.$paragon-blue;
+        @include variables.size-height(1.45rem, 1.85rem);
 
 
         @media (max-width:1000px) {
-            @include size-height(1rem, 1.85rem);
+            @include variables.size-height(1rem, 1.85rem);
             text-align: center;
 
         }
@@ -140,16 +142,16 @@ div.footer-text {
 }
 
 .btn {
-    font-family: $font-family;
+    font-family: variables.$font-family;
     border-radius: 50px;
-    border: 2px solid $paragon-blue;
-    background-color: $paragon-red;
-    color: $paragon-white;
+    border: 2px solid variables.$paragon-blue;
+    background-color: variables.$paragon-red;
+    color: variables.$paragon-white;
 
     &:hover {
-        border: 2px solid $paragon-blue;
-        background-color: $paragon-blue;
-        color: $paragon-white;    
+        border: 2px solid variables.$paragon-blue;
+        background-color: variables.$paragon-blue;
+        color: variables.$paragon-white;    
     }
 }
 

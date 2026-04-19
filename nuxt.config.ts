@@ -43,7 +43,6 @@ export default defineNuxtConfig({
     ],
   },
   modules: [
-    '@nuxtjs/critters',
     '@nuxtjs/device',
     '@nuxtjs/sitemap',
     '@nuxtjs/tailwindcss'

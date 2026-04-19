@@ -1,8 +1,8 @@
 //app styles
-@import '~/assets/scss/variables.scss';
-@import '~/assets/scss/textstyles.scss';
-@import '~/assets/scss/media.scss';
-@import '~/assets/scss/contact-card.scss';
+@use '~/assets/scss/variables.scss';
+@use '~/assets/scss/textstyles.scss';
+@use '~/assets/scss/media.scss';
+@use '~/assets/scss/contact-card.scss';
 
 body {
 
@@ -11,8 +11,8 @@ body {
     }
 
     margin: 0;
-    font-family: $font-family;
-    color: $paragon-blue;
+    font-family: variables.$font-family;
+    color: variables.$paragon-blue;
     height: 100vh;
 
     section {
@@ -43,36 +43,36 @@ body {
         }
 
         &#home {
-            background-image: url("#{$paragon-cloudfront}craneshero2.jpg");
+            background-image: url("#{variables.$paragon-cloudfront}craneshero2.jpg");
 
             @media (max-width:500px) {
-                background-image: url("#{$paragon-cloudfront}craneshero2.webp");
+                background-image: url("#{variables.$paragon-cloudfront}craneshero2.webp");
                 background-position: right;
             }
         }
 
         &#services {
-            background-image: url("#{$paragon-cloudfront}phnorfolk_trumanship.jpg");
+            background-image: url("#{variables.$paragon-cloudfront}phnorfolk_trumanship.jpg");
 
             @media (max-width:500px) {
-                background-image: url("#{$paragon-cloudfront}norfolkship.webp");
+                background-image: url("#{variables.$paragon-cloudfront}norfolkship.webp");
                 background-position: right;
             }
         }
 
         &#aboutus {
-            background-image: url("#{$paragon-cloudfront}boat-1451202_1920.jpg");
+            background-image: url("#{variables.$paragon-cloudfront}boat-1451202_1920.jpg");
 
             @media (max-width:500px) {
-                background-image: url("#{$paragon-cloudfront}militaryship2.webp");
+                background-image: url("#{variables.$paragon-cloudfront}militaryship2.webp");
             }
         }
 
         &#contactus {
-            background-image: url("#{$paragon-cloudfront}sarah-dann-5765396_1920.jpg");
+            background-image: url("#{variables.$paragon-cloudfront}sarah-dann-5765396_1920.jpg");
 
             @media (max-width:500px) {
-                background-image: url("#{$paragon-cloudfront}rig.webp");
+                background-image: url("#{variables.$paragon-cloudfront}rig.webp");
                 background-position: right;
             }
 
@@ -86,11 +86,11 @@ body {
         }
 
         &#contactForm {
-            background-color: $paragon-gray;
+            background-color: variables.$paragon-gray;
         }
 
         &#emailSuccess {
-            background: linear-gradient($paragon-white, $paragon-blue);
+            background: linear-gradient(variables.$paragon-white, variables.$paragon-blue);
         }
     }
 
