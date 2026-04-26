@@ -9,5 +9,5 @@ test('page uptime', async ({ page }) => {
 
   // expect heading with same name as link and capture screenshot
   await expect(page.getByRole('heading', { name: 'Contact Us' })).toBeVisible();
-  await expect(page).toHaveScreenshot('contactuspage-chromium-win32-chromium-linux.png');
+  await expect(page).toHaveScreenshot('contactuspage.png');
 });
