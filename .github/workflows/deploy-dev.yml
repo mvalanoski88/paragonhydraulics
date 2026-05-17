@@ -2,8 +2,7 @@ name: Playwright Visual Regression
 
 on:
   push:
-    branches:
-      - ["dev"]
+    branches: [ "dev" ]
 
 permissions:
   contents: read
