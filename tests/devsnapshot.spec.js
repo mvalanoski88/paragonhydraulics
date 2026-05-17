@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('page uptime', async ({ page }) => {
+test('snapshot from dev homepage', async ({ page }) => {
   // navigate to homepage
   await page.goto('https://dev.paragonhydraulics.com');
 
@@ -9,5 +9,5 @@ test('page uptime', async ({ page }) => {
 
   // expect heading with same name as link and capture screenshot
   await expect(page.getByRole('heading', { name: 'Contact Us' })).toBeVisible();
-  await expect(page).toHaveScreenshot('contactuspage.png', {maxDiffPixelRatio: 0.35});
+  await expect(page).toHaveScreenshot('contactus-page-check.png', {maxDiffPixelRatio: 0.35});
 });
