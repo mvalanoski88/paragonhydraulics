@@ -30,7 +30,8 @@ jobs:
       - name: Download golden screenshot from S3
         run: |
           mkdir -p tests/pageuptime.spec.js-snapshots
-          aws s3 cp s3://assets.paragonhydraulics.com/other/playwright/contactuspage-chromium-linux.png tests/pageuptime.spec.js-snapshots/contactuspage-chromium-linux.png
+          aws s3 cp s3://assets.paragonhydraulics.com/other/playwright/contactuspage-chromium-linux.png \
+          tests/pageuptime.spec.js-snapshots/contactuspage-chromium-win32.png
 
       - name: Run Playwright tests
         run: npx playwright test
