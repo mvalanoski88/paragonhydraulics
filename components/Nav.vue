@@ -18,7 +18,7 @@
               id="mainLogo"
               width="290"
               height="130"
-              :src="`${config.paragonConsts.AWS_IMG_DIR}phlogo.webp`"
+              :src="`${config.public.awsUrl}phlogo.webp`"
               alt="Paragon Hydraulics Logo"
             />
           </NuxtLink>
@@ -92,7 +92,7 @@
 import { ref, onMounted } from 'vue';
 import { Icon } from '@iconify/vue';
 
-const config = useAppConfig()
+const config = useRuntimeConfig()
 
 const { isMobileOrTablet } = useDevice()
 

@@ -8,7 +8,8 @@ test('generate production baseline', async ({ page }) => {
   await page.getByRole('link', { name: 'Contact Us' }).first().click();
 
   await expect(
-    page.getByRole('heading', { name: 'Contact Us' })
+    page.getByRole('heading', { name: 'Contact Us' }),
+    page.getByRole('iframe', { timeout: 5000 })
   ).toBeVisible();
 
   await expect(page).toHaveScreenshot('contactus-page-check.png');

@@ -10,7 +10,7 @@
 
             <NuxtLink to="/">
               <img
-                :src="`${config.paragonConsts.AWS_IMG_DIR}phlogo_black.webp`"
+                :src="`${config.public.awsUrl}phlogo_black.webp`"
                 width="175"
                 alt="Paragon Hydraulics Logo"
               />
@@ -18,7 +18,7 @@
 
             <img
               class="mx-0 md:mx-2"
-              :src="`${config.paragonConsts.AWS_IMG_DIR}vsralogo_bw.webp`"
+              :src="`${config.public.awsUrl}vsralogo_bw.webp`"
               width="110"
               alt="VSRA Logo"
             />
@@ -78,7 +78,7 @@
 <script setup>
 import { Icon } from '@iconify/vue';
 
-const config = useAppConfig();
+const config = useRuntimeConfig();
 const { isDesktopOrTablet } = useDevice()
 
 </script>

@@ -21,7 +21,7 @@
             </div>
         </section>
         <section id="techServices" class="flex justify-center">
-            <div class="p-4 md:p-5">
+            <div class="pt-6 lg:pb-4">
                 <div class="flex flex-wrap">
                     <div class="w-full flex flex-col items-center">
                         <SectionHeader heading="General technical services" :style="'light'" />
@@ -33,14 +33,14 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="flex flex-wrap p-1 lg:p-3 red">
+                        <div class="flex flex-wrap p-1 lg:p-3 mt-12 bg-paragon-red w-full opacity-90">
                             <div class="p-0 w-full">
                                 <div class="flex flex-wrap mt-3">
                                     <h4 class="text-center w-full underline">who we provide services to</h4>
                                 </div>
                                 <div class="flex flex-wrap mt-4">
                                     <ul class="flex-1 lg:flex lg:flex-wrap clients text-center">
-                                        <li v-for="name in serviceClients" class="lg:w-1/4 py-3 text-xl">
+                                        <li v-for="name in serviceClients" class="lg:w-1/4 py-2 lg:py-3 text-xl lg:text-2xl">
                                             {{ name.name }}
                                         </li>
                                     </ul>

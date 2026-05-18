@@ -8,6 +8,6 @@ test('snapshot from dev homepage', async ({ page }) => {
   await page.getByRole('link', { name: 'Contact Us' }).first().click();
 
   // expect heading with same name as link and capture screenshot
-  await expect(page.getByRole('heading', { name: 'Contact Us' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Contact Us' }), page.getByRole('iframe',  {timeout: 5000 })).toBeVisible();
   await expect(page).toHaveScreenshot('contactus-page-check.png', {maxDiffPixelRatio: 0.35});
 });
