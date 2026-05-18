@@ -38,7 +38,7 @@ jobs:
       - name: Run visual regression tests
         run: |
           NUXT_PUBLIC_PLAYWRIGHT_TEST_URL=https://dev.paragonhydraulics.com \
-          npx playwright test tests/devsnapshot.spec.js
+          npx playwright test tests/baselinesnapshot.spec.js
 
       - name: Upload Playwright report
         if: always()
