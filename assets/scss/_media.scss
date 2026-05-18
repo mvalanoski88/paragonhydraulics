@@ -1,3 +1,5 @@
+@use '~/assets/scss/variables.scss';
+
 #mainLogo {
     width: 15.5rem;
     height: 100%;
@@ -10,28 +12,21 @@ img {
 }
 
 svg {
-    color: $paragon-blue;
+    color: variables.$paragon-blue;
     margin-right: 5px;
 }
 
 .blue {
-    background-color: $paragon-blue;
+    background-color: variables.$paragon-blue;
 
     &:nth-last-of-type(2) {
-        background-color: rgba($paragon-blue, 0.90);
+        background-color: rgba(variables.$paragon-blue, 0.90);
     }
 }
 
 .red {
     margin-top: 5rem;
-    background-color: rgba($paragon-red, 0.65);
-    width: 75%;
-
-    @media (max-width:800px) {
-        margin-top: 0;
-        width: 100%;
-    }
-    
+    background-color: rgba(variables.$paragon-red, 0.65);    
 }
 
 .image-bg {
@@ -112,5 +107,5 @@ svg {
 }
 
 iframe {
-    border:2px solid $paragon-blue;
+    border:2px solid variables.$paragon-blue;
 }

@@ -1,0 +1,50 @@
+name: Playwright Visual Regression
+
+on:
+  push:
+    branches: [ "dev" ]
+
+permissions:
+  contents: read
+
+jobs:
+  visual-regression-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Create snapshot directory
+        run: mkdir -p tests/devsnapshot.spec.js-snapshots
+
+      #
+      # Generate production baseline
+      #
+      - name: Capture production baseline
+        run: |
+          NUXT_PUBLIC_PLAYWRIGHT_TEST_URL=https://paragonhydraulics.com \
+          npx playwright test tests/baselinesnapshot.spec.js --update-snapshots
+
+      #
+      # Compare dev against production baseline
+      #
+      - name: Run visual regression tests
+        run: |
+          NUXT_PUBLIC_PLAYWRIGHT_TEST_URL=https://dev.paragonhydraulics.com \
+          npx playwright test tests/baselinesnapshot.spec.js
+
+      - name: Upload Playwright report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: |
+            playwright-report
+            test-results
