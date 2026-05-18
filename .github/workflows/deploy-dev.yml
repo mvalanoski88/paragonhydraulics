@@ -29,13 +29,15 @@ jobs:
       #
       - name: Capture production baseline
         run: |
-          npx playwright test tests/baselinesnapshot.spec.js
+          NUXT_PUBLIC_PLAYWRIGHT_TEST_URL=https://paragonhydraulics.com \
+          npx playwright test tests/baselinesnapshot.spec.js --update-snapshots
 
       #
       # Compare dev against production baseline
       #
       - name: Run visual regression tests
         run: |
+          NUXT_PUBLIC_PLAYWRIGHT_TEST_URL=https://dev.paragonhydraulics.com \
           npx playwright test tests/devsnapshot.spec.js
 
       - name: Upload Playwright report

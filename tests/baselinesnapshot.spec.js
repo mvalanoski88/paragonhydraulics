@@ -3,7 +3,9 @@ import { test, expect } from '@playwright/test';
 
 test('generate production baseline', async ({ page }) => {
 
-  await page.goto('https://paragonhydraulics.com');
+  const targetUrl = process.env.NUXT_PUBLIC_PLAYWRIGHT_TEST_URL || 'https://dev.paragonhydraulics.com';
+
+  await page.goto(targetUrl);
 
   await page.getByRole('link', { name: 'Contact Us' }).first().click();
 
