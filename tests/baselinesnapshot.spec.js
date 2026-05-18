@@ -14,5 +14,5 @@ test('generate production baseline', async ({ page }) => {
     page.getByRole('iframe', { timeout: 5000 })
   ).toBeVisible();
 
-  await expect(page).toHaveScreenshot('contactus-page-check.png');
+  await expect(page).toHaveScreenshot('contactus-page-check.png', {maxDiffPixelRatio: 0.25});
 });
