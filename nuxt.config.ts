@@ -1,4 +1,5 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from '@tailwindcss/vite'
+
 export default defineNuxtConfig({
   ssr: true,
   devtools: { 
@@ -23,18 +24,15 @@ export default defineNuxtConfig({
       devSiteUrl: process.env.NUXT_PUBLIC_PLAYWRIGHT_TEST_DEV_URL || 'https://dev.paragonhydraulics.com'
     }
   },
-  tailwindcss: {
-    cssPath: ['~/assets/css/tailwind.css', { injectPosition: "first" }],
-    configPath: 'tailwind.config',
-    exposeConfig: {
-      level: 2
-    },
-    config: {},
-    viewer: true,
-  },
   css: [
+    '~/assets/css/tailwind.css',
     '~/assets/css/fonts.css'
   ],
+  vite: {
+    plugins: [
+      tailwindcss()
+    ]
+  },
   site: {
     url: 'https://paragonhydraulics.com'
   },
@@ -46,7 +44,6 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/device',
     '@nuxtjs/sitemap',
-    '@nuxtjs/tailwindcss'
   ],
   compatibilityDate: '2025-04-11'
 })

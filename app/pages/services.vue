@@ -94,8 +94,8 @@ useHead({
 }),
 
 useSeoMeta({
-  title: 'Paragon Hydraulics | Services',
-  ogTitle: 'Paragon Hydraulics | Services',
+  title: 'Marine Hydraulic & Shipboard Repair Services | Paragon Hydraulics',
+  ogTitle: 'Marine Hydraulic & Shipboard Repair Services | Paragon Hydraulics',
   description: 'Paragon offers an extensive array of shipboard services, emphasizing expertise in hydraulic crane and deck equipment repair, installation, and technical representation.',
   ogDescription: 'Paragon offers an extensive array of shipboard services, emphasizing expertise in hydraulic crane and deck equipment repair, installation, and technical representation.',
 })

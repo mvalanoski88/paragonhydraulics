@@ -23,8 +23,10 @@ useHead({
 }),
 
 useSeoMeta({
-  title: 'Paragon Hydraulics | About Us',
-    description:
-        'Our team of skilled engineers and technicians brings a wealth of experience to every project. From conceptualization to execution, we leverage our expertise to deliver robust and reliable mechanical solutions.',
+  title: 'About Paragon Hydraulics | Veteran-Owned Ship Repair in Virginia',
+  ogTitle: 'About Paragon Hydraulics | Veteran-Owned Ship Repair in Virginia',
+  description:
+    'Our team of skilled engineers and technicians brings a wealth of experience to every project. From conceptualization to execution, we leverage our expertise to deliver robust and reliable mechanical solutions.',
+    ogDescription: 'Our team of skilled engineers and technicians brings a wealth of experience to every project. From conceptualization to execution, we leverage our expertise to deliver robust and reliable mechanical solutions.'
 })
 </script>

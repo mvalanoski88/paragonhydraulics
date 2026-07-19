@@ -89,9 +89,11 @@ useHead({
 }),
 
 useSeoMeta({
-  title: 'Paragon Hydraulics | Home',
-    description:
-        'Paragon Hydraulics LLC is comprised of a dedicated team of exceptionally skilled and motivated professionals boasting a collective experience of over 50 years in ship repair. Our team actively contributes to various programs for the Navy, Army, Coast Guard, MSC, and commercial industries.',
+  title: 'Marine Hydraulics & Shipboard Crane Repair | Paragon Hydraulics',
+  ogTitle: 'Marine Hydraulics & Shipboard Crane Repair | Paragon Hydraulics',
+  description:
+  'Paragon Hydraulics LLC is comprised of a dedicated team of exceptionally skilled and motivated professionals boasting a collective experience of over 50 years in ship repair. Our team actively contributes to various programs for the Navy, Army, Coast Guard, MSC, and commercial industries.',
+  ogDescription: 'Paragon Hydraulics LLC is comprised of a dedicated team of exceptionally skilled and motivated professionals boasting a collective experience of over 50 years in ship repair. Our team actively contributes to various programs for the Navy, Army, Coast Guard, MSC, and commercial industries.'
 })
 
 </script>

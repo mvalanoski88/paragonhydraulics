@@ -103,7 +103,10 @@ useHead({
 }),
 
 useSeoMeta({
-  title: 'Paragon Hydraulics | Contact Us',
+  title: 'Request Marine Hydraulic & Shipboard Service | Paragon Hydraulics',
+  ogTitle: 'Request Marine Hydraulic & Shipboard Service | Paragon Hydraulics',
+  description: 'Paragon offers an extensive array of shipboard services, emphasizing expertise in hydraulic crane and deck equipment repair, installation, and technical representation.',
+  ogDescription: 'Paragon offers an extensive array of shipboard services, emphasizing expertise in hydraulic crane and deck equipment repair, installation, and technical representation.',
 })
 
 </script>
