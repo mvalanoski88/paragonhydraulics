@@ -1,0 +1,45 @@
+name: Merge Dev Into Production
+
+on:
+  push:
+    branches:
+      - dev
+
+permissions:
+  contents: write
+
+env:
+  PRODUCTION_BRANCH: master
+
+jobs:
+  test-and-merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout dev
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Run Playwright baseline test
+        run: npx playwright test tests/baselinesnapshot.spec.js
+
+      - name: Merge dev into production
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin "${PRODUCTION_BRANCH}"
+          git checkout "${PRODUCTION_BRANCH}"
+          git merge --no-ff --no-edit origin/dev
+          git push origin HEAD:"${PRODUCTION_BRANCH}"

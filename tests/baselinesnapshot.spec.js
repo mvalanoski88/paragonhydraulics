@@ -1,18 +1,18 @@
 
 import { test, expect } from '@playwright/test';
 
-test('generate production baseline', async ({ page }) => {
+test('paragon navigation and homepage check', async ({ page }) => {
+  const targetUrl = 'https://dev.paragonhydraulics.com';
+  const routes = ['/', '/services', '/aboutus', '/contactus'];
 
-  const targetUrl = process.env.NUXT_PUBLIC_PLAYWRIGHT_TEST_URL || 'https://dev.paragonhydraulics.com';
+  for (const route of routes) {
+    const response = await page.goto(`${targetUrl}${route}`, { waitUntil: 'domcontentloaded' });
+    expect(response?.status()).toBe(200);
+  }
 
-  await page.goto(targetUrl);
-
-  await page.getByRole('link', { name: 'Contact Us' }).first().click();
-
-  await expect(
-    page.getByRole('heading', { name: 'Contact Us' }),
-    page.getByRole('iframe', { timeout: 5000 })
-  ).toBeVisible();
-
-  await expect(page).toHaveScreenshot('contactus-page-check.png', {maxDiffPixelRatio: 0.25});
+  await page.goto(targetUrl, { waitUntil: 'domcontentloaded' });
+  await expect(page).toHaveScreenshot('homepage-full-page.png', {
+    maxDiffPixelRatio: 0.15,
+    fullPage: true,
+  });
 });
