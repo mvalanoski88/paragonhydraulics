@@ -36,4 +36,3 @@ public/{*.jpg, *.png}
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
-/tests/**/*.png
