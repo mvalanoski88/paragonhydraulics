@@ -25,20 +25,20 @@ module.exports = {
         'RobotoFlex': 'RobotoFlex',
       },
       colors: {
-        'paragon-red': 'var(--paragon-red)',
-        'paragon-blue': 'var(--paragon-blue)',
-        'paragon-gray': 'var(--paragon-gray)',
-        'paragon-white': 'var(--paragon-white)',
-        'paragon-white-faded': 'var(--paragon-white-faded)',
+        'paragon-red': 'var(--color-paragon-red)',
+        'paragon-blue': 'var(--color-paragon-blue)',
+        'paragon-gray': 'var(--color-paragon-gray)',
+        'paragon-white': 'var(--color-paragon-white)',
+        'paragon-white-faded': 'var(--color-paragon-white-faded)',
       },
       dropShadow: {
         'dark-shadow-small': '1px 2px 1px var(--off-black)',
         'dark-shadow': '1px 1px 3px var(--off-black)',
       },
       backgroundColor: {
-        'paragon-gray': 'var(--paragon-gray)',
-        'paragon-blue': 'var(--paragon-blue)',
-        'paragon-red': 'var(--paragon-red)',
+        'paragon-gray': 'var(--color-paragon-gray)',
+        'paragon-blue': 'var(--color-paragon-blue)',
+        'paragon-red': 'var(--color-paragon-red)',
       },
       zIndex: {
         '1': '1',

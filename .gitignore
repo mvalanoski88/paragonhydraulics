@@ -36,4 +36,8 @@ public/{*.jpg, *.png}
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
-/tests/**/*.png
+
+# Playwright snapshot baselines
+test-results/
+!tests/baselinesnapshot.spec.js-snapshots/chromium/homepage-full-page.png
+!tests/baselinesnapshot.spec.js-snapshots/Mobile Safari/homepage-full-page.png

@@ -1,0 +1,15 @@
+.contact-card {
+    background-color: rgba(111, 134, 149, 0.75);
+    border: 1px solid rgba(5, 21, 53, 0.85);
+}
+
+.contact-card .contact-details > div > span {
+    font-size: 2.35rem;
+    line-height: 2.25rem;
+    text-decoration: underline;
+}
+
+.contact-card .contact-details span {
+    font-size: 1.35rem;
+    line-height: 2.25rem;
+}

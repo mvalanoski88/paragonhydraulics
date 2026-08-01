@@ -31,30 +31,30 @@
           
           <div class="flex flex-wrap footer-text uppercase">
 
-            <div class="flex p-0 justify-center lg:justify-end w-full">
+            <div class="flex p-0 justify-center md:justify-end w-full">
               <span>Iso 9001-2015 compliant</span>
             </div>
 
-            <div class="flex p-0 justify-center lg:justify-end w-full">
-              <span>
+            <div class="flex p-0 justify-center md:justify-end w-full">
+              <span class="md:text-right">
                 <a
                   class="no-underline"
-                  :href="!isDesktopOrTablet ? 'tel:757-973-3773' : null"
+                  :href="!isDesktopOrTablet ? 'tel:757-937-3773' : null"
                 >
-                  757-973-3773
+                  757-937-3773
                 </a>
                 |
                 <a
                   class="no-underline"
                   href="https://maps.app.goo.gl/HDFT6u3Lu4PESYWZA"
                 >
-                  711 falcon ave, chesapeake va, 23324
+                  711 falcon ave., Suite #3, chesapeake va, 23324
                 </a>
               </span>
             </div>
 
             <div class="flex flex-col md:flex-row p-0 w-full m-0">
-              <div class="flex p-0 items-center justify-center lg:justify-end w-full">
+              <div class="flex p-0 items-center justify-center md:justify-end md:text-right w-full">
                 <Icon class="text-2xl" icon="ic:twotone-build-circle" />
                 <span>Built & Managed by&nbsp;</span>
                 <a class="underline"
@@ -82,14 +82,5 @@ const config = useRuntimeConfig();
 const { isDesktopOrTablet } = useDevice()
 
 </script>
-<style lang="scss" scoped>
-div.footer-text {
-   @media (max-width:1500px) and (min-width:760x) {
-      text-align: right;
-    }
-    @media (max-width:500px) {
-      text-align: center !important;
-      flex-direction: column;
-    }
-}
+<style scoped>
 </style>
