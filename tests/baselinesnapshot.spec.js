@@ -6,8 +6,10 @@ test('paragon navigation and homepage check', async ({ page }) => {
   const routes = ['/', '/services', '/aboutus', '/contactus'];
 
   for (const route of routes) {
-    const response = await page.goto(`${targetUrl}${route}`, { waitUntil: 'domcontentloaded' });
+    const checkPage = await page.context().newPage();
+    const response = await checkPage.goto(`${targetUrl}${route}`, { waitUntil: 'domcontentloaded' });
     expect(response?.status()).toBe(200);
+    await checkPage.close();
   }
 
   await page.goto(targetUrl, { waitUntil: 'domcontentloaded' });
