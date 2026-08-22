@@ -6,46 +6,46 @@
                     <div class="basis-full lg:basis-2/5 text-center lg:text-left">
                         <h1>CONTACT US</h1>
                     </div>
-                    <div class="basis-full lg:basis-3/5 flex flex-col gap-4 p-0">
-                        <div class="flex flex-wrap items-center">
-                            <div class="w-1/12 flex items-center">
+                    <div class="basis-full lg:basis-3/5 w-full lg:w-4/5 flex flex-col p-0 gap-2 lg:gap-6">
+                        <div class="flex flex-wrap items-center gap-1">
+                            <div class="w-1/12 lg:w-auto flex items-center">
                                 <p class="uppercase text-left">
-                                    <Icon icon="zondicons:location" />
+                                    <Icon class="text-4xl" icon="zondicons:location" />
                                 </p>
                             </div>
-                            <div class="w-11/12 flex items-center">
-                                <p class="text-2xl lg:text-4xl mb-2 lg:mb-4 uppercase text-left leading-snug">711 falcon ave | chesapeake va, 23324</p>
+                            <div class="w-10/12 flex items-center">
+                                <p class="text-2xl lg:text-4xl mb-2 lg:mb-0 uppercase text-left leading-snug">711 falcon ave | chesapeake va, 23324</p>
                             </div>
                         </div>
-                        <div class="flex flex-wrap items-center">
-                            <div class="w-1/12 flex items-center">
+                        <div class="flex flex-wrap items-center gap-1">
+                            <div class="w-1/12 lg:w-auto flex items-center">
                                 <p class="uppercase">
-                                    <Icon icon="tabler:mail-up" />
+                                    <Icon class="text-4xl" icon="tabler:mail-up" />
                                 </p>
                             </div>
-                            <div class="w-11/12 flex items-center">
-                                <a class="text-2xl lg:text-4xl mb-2 lg:mb-4 uppercase text-left leading-snug" href="mailto:rfq@paragonhydraulics.com?subject=RFQ Request">rfq@paragonhydraulics.com</a>
+                            <div class="w-10/12 flex items-center">
+                                <a class="text-2xl lg:text-4xl mb-2 lg:mb-0 uppercase text-left leading-snug" href="mailto:rfq@paragonhydraulics.com?subject=RFQ Request">rfq@paragonhydraulics.com</a>
                             </div>
                         </div>
-                        <div v-if="isDesktopOrTablet" class="flex flex-wrap items-center">
-                            <div class="w-1/12 flex items-center">
+                        <div v-if="isDesktopOrTablet" class="flex flex-wrap items-center gap-1">
+                            <div class="w-1/12 lg:w-auto flex items-center">
                                 <p class="uppercase">
-                                    <Icon icon="ion:call-sharp" />
+                                    <Icon class="text-4xl" icon="ion:call-sharp" />
                                 </p>
                             </div>
-                            <div class="w-11/12 flex items-center">
-                                <p class="text-2xl lg:text-4xl mb-2 lg:mb-4 uppercase text-left leading-snug">
+                            <div class="w-10/12 flex items-center">
+                                <p class="text-2xl lg:text-4xl mb-2 lg:mb-0 uppercase text-left leading-snug">
                                     757-937-3773
                                 </p>
                             </div>
                         </div>
-                        <div v-else class="flex flex-wrap items-center">
-                            <div class="w-1/12 flex items-center">
+                        <div v-else class="flex flex-wrap items-center gap-1">
+                            <div class="w-1/12 lg:w-auto flex items-center">
                                 <p class="uppercase">
                                     <Icon icon="tabler:phone-call" />
                                 </p>
                             </div>
-                            <div class="w-11/12 flex items-center">
+                            <div class="w-10/12 flex items-center">
                                 <a class="text-2xl lg:text-4xl mb-2 lg:mb-4 uppercase text-left leading-snug" id="mobilePhone" href="tel:757-937-3773">757-937-3773</a>
                             </div>
                         </div>
