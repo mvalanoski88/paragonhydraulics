@@ -14,8 +14,6 @@ a,
 input {
     font-family: 'Roboto Flex', sans-serif;
     color: var(--color-paragon-white);
-    font-size: 1.15rem;
-    line-height: 2rem;
 }
 
 @media (max-width: 1000px) {
@@ -23,6 +21,10 @@ input {
     input {
         text-wrap: balance;
     }
+}
+
+input, select {
+    background-color: var(--color-paragon-white);
 }
 
 p {
