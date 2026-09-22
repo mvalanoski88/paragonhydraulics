@@ -48,7 +48,7 @@
                   class="no-underline"
                   href="https://maps.app.goo.gl/HDFT6u3Lu4PESYWZA"
                 >
-                  711 falcon ave., Suite #3, chesapeake va, 23324
+                  {{ address }}
                 </a>
               </span>
             </div>
@@ -77,9 +77,11 @@
 </template>
 <script setup>
 import { Icon } from '@iconify/vue';
+import { inject } from 'vue';
 
 const config = useRuntimeConfig();
 const { isDesktopOrTablet } = useDevice()
+const address = inject('address')
 
 </script>
 <style scoped>

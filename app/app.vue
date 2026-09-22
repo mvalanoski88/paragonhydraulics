@@ -6,6 +6,10 @@
 
 <script setup>
 
+import { provide } from 'vue';
+
+provide('address', '3809 Cook Blvd., Chesapeake, VA 23323')
+
 useHead({
   script: [
     {
