@@ -14,7 +14,7 @@
                                 </p>
                             </div>
                             <div class="w-10/12 flex items-center">
-                                <p class="text-2xl lg:text-4xl mb-2 lg:mb-0 uppercase text-left leading-snug">711 falcon ave | chesapeake va, 23324</p>
+                                <p class="text-2xl lg:text-4xl mb-2 lg:mb-0 uppercase text-left leading-snug">{{ address }}</p>
                             </div>
                         </div>
                         <div class="flex flex-wrap items-center gap-1">
@@ -53,7 +53,7 @@
                 </div>
                 <div v-if="iframeLoaded" class="flex flex-wrap mt-3 lg:mt-4">
                     <div class="w-full flex justify-center">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3195.518442376843!2d-76.2819904!3d36.7821183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89baa361505b8a3b%3A0x5183a2f8d4d3755!2sParagon%20Hydraulics!5e0!3m2!1sen!2sus!4v1752897307929!5m2!1sen!2sus"
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3195.48551614045!2d-76.37644502359593!3d36.78290796867313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89baa15c95ffbfbd%3A0x4331b5898ab13d34!2s3809%20Cook%20Blvd%2C%20Chesapeake%2C%20VA%2023323!5e0!3m2!1sen!2sus!4v1790104848831!5m2!1sen!2sus"
                                 :width="iframeWidth"
                                 :height="iframeHeight"
                                 allowfullscreen=""
@@ -80,7 +80,9 @@
 <script setup>
 import {ref, computed} from 'vue'
 import { Icon } from '@iconify/vue';
+import { inject } from 'vue';
 
+const address = inject('address')
 const loaded = ref(false)
 const config = useRuntimeConfig();
 const route = useRoute();
