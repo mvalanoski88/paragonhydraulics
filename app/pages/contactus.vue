@@ -2,7 +2,7 @@
     <main>
         <section id="contactus">
             <div class="container mt-5 lg:mt-0">
-                <div class="flex flex-col lg:flex-row items-start lg:items-center content-start flex-wrap">
+                <div class="flex flex-col lg:flex-row items-start lg:items-center content-start flex-wrap gap-4 lg:gap-0">
                     <div class="basis-full lg:basis-2/5 text-center lg:text-left">
                         <h1>CONTACT US</h1>
                     </div>
@@ -14,7 +14,7 @@
                                 </p>
                             </div>
                             <div class="w-10/12 flex items-center">
-                                <p class="text-2xl lg:text-4xl mb-2 lg:mb-0 uppercase text-left leading-snug">{{ address }}</p>
+                                <p class="text-xl lg:text-4xl mb-2 lg:mb-0 uppercase text-left leading-snug">{{ address }}</p>
                             </div>
                         </div>
                         <div class="flex flex-wrap items-center gap-1">
